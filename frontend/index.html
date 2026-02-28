@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Music Platform - Browse</title>
+  <style>
+    :root{
+      --bg1:#070a12;
+      --bg2:#0b1022;
+      --card:#0f1730;
+      --card2:#0b1226;
+      --stroke:#243055;
+      --stroke2:#2c3a67;
+      --text:#e8eefc;
+      --muted:#a6b3d6;
+      --accent:#7aa7ff;
+    }
+
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(122,167,255,0.14), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(255,210,74,0.10), transparent 60%),
+        linear-gradient(180deg, var(--bg2), var(--bg1));
+      min-height:100vh;
+    }
+
+    header{
+      position:sticky; top:0; z-index:10;
+      padding: 16px 18px;
+      backdrop-filter: blur(10px);
+      background: rgba(12,16,34,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+    h1{ margin:0; font-size:18px; letter-spacing:0.2px; }
+    .muted{ color:var(--muted); font-size:13px; }
+    .row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+
+    input, select, button{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      outline:none;
+    }
+    input{ min-width:260px; flex:1; }
+    button{
+      cursor:pointer;
+      background: rgba(122,167,255,0.18);
+      border:1px solid rgba(122,167,255,0.30);
+    }
+    button:hover{ background: rgba(122,167,255,0.26); }
+    button.ghost{
+      background: rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.10);
+    }
+
+    main{ padding: 18px; max-width: 1100px; margin:0 auto; }
+    .grid{ display:grid; grid-template-columns: 1fr 1fr; gap:14px; }
+    @media (max-width: 900px){ .grid{ grid-template-columns:1fr; } }
+
+    .card{
+      background: rgba(15,23,48,0.85);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:14px;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+    }
+    .list{ display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+    .item{
+      padding:12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      transition: transform .08s ease, border-color .12s ease;
+    }
+    .item:hover{
+      border-color: rgba(122,167,255,0.38);
+      transform: translateY(-1px);
+    }
+    a{ color:var(--text); text-decoration:none; }
+    .pill{
+      display:inline-block;
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      margin-right:6px;
+      font-size:12px;
+      color:#cfe0ff;
+    }
+    .tabs{ display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
+    .tab{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      cursor:pointer;
+    }
+    .tab.active{
+      border-color: rgba(122,167,255,0.40);
+      background: rgba(122,167,255,0.16);
+    }
+    .error{ color:#ffb4b4; }
+
+    .song-row{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .song-rating-box{
+      display:flex; align-items:center; gap:8px;
+    }
+    .tiny{ font-size:12px; color: rgba(255,255,255,0.70); }
+    code{ color: #cfe0ff; }
+
+    .rating-box { display:inline-flex; align-items:center; margin-left:8px; transform: translateY(1px); }
+
+    .mp-stars { display:inline-flex; align-items:center; gap:6px; }
+    .mp-stars svg { display:block; }
+    .mp-stars-label { font-size:12px; color:#a6b3d6; margin-left:6px; }
+
+    .mp-stars-picker { display:flex; flex-direction:column; gap:8px; margin-top:10px; }
+    .mp-stars-clickable { cursor:pointer; display:inline-flex; width:max-content; padding:6px 10px; border-radius:12px; border:1px solid #243055; background:#0b1226; }
+    .mp-stars-clickable:hover { border-color:#3a4a84; }
+
+    .mp-rating-status { margin-top:8px; font-size:12px; color:#a6b3d6; }
+    .mp-rating-status.mp-err { color:#ffb4b4; }
+
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .welcome{
+      font-size:13px;
+      color: var(--muted);
+      padding:8px 10px;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .btn-logout{
+      cursor:pointer;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(252,129,129,0.35);
+      background: rgba(252,129,129,0.14);
+      color: var(--text);
+    }
+    .btn-logout:hover{
+      background: rgba(252,129,129,0.22);
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="topbar">
+    <div>
+      <h1>Music Platform</h1>
+      <div class="muted">Frontend (nginx) proxy ka servisima preko <code>/api/*</code></div>
+    </div>
+
+    <div class="nav-right">
+      <div class="row">
+        <button class="ghost" id="btnHome">Artists</button>
+        <button class="ghost" id="btnSearchView">Search</button>
+      </div>
+
+      <div class="row">
+        <span class="welcome" id="welcomeText">Dobrodošli u Music Platform</span>
+        <button class="ghost" id="btnAdmin" style="display:none;">Admin</button>
+        <button class="btn-logout" id="btnLogout">Odjava</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:10px;">
+    <input id="q" placeholder="Search (artist/album/song)..." />
+    <select id="genre">
+      <option value="">(genre: all)</option>
+    </select>
+    <select id="limit">
+      <option value="10">limit 10</option>
+      <option value="20" selected>limit 20</option>
+      <option value="50">limit 50</option>
+    </select>
+    <button id="btnApply">Apply</button>
+    <span id="status" class="muted"></span>
+  </div>
+</header>
+
+<main>
+  <div id="view"></div>
+</main>
+
+<script>
+  // ratings.js koristi API_BASE; kod nas je to isti origin (nginx proxy)
+  window.API_BASE = "";
+</script>
+<script src="/assets/ratings.js"></script>
+<script src="/assets/auth.js"></script>
+
+<script>
+  const elView = document.getElementById('view');
+  const elQ = document.getElementById('q');
+  const elGenre = document.getElementById('genre');
+  const elLimit = document.getElementById('limit');
+  const elStatus = document.getElementById('status');
+
+  // ===== AUTH / ROLE (CENTRALIZED VIA auth.js) =====
+  const me = MPAuth.requireAuth("user_service.html");
+  const btnAdmin = document.getElementById('btnAdmin');
+
+  function userLabel(u) {
+    return (u?.username || u?.email || u?.name || u?.id || '').toString();
+  }
+
+  if (me) {
+    document.getElementById('welcomeText').textContent = `Dobrodošli - ${userLabel(me)}`;
+
+    if (MPAuth.isAdmin(me)) {
+      btnAdmin.style.display = '';
+      btnAdmin.onclick = () => window.location.href = 'admin-content.html';
+    } else {
+      btnAdmin.style.display = 'none';
+    }
+  }
+
+  document.getElementById('btnLogout').onclick = () => {
+    MPAuth.clearAuth();
+    window.location.href = 'user_service.html';
+  };
+
+  // ===== NAV =====
+  document.getElementById('btnHome').onclick = () => { location.hash = '#artists'; };
+  document.getElementById('btnSearchView').onclick = () => { location.hash = '#search'; };
+  document.getElementById('btnApply').onclick = () => handleRoute(true);
+
+  elQ.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') handleRoute(true);
+  });
+
+  function escapeHtml(s){
+    return String(s ?? '').replace(/[&<>"']/g, m => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[m]));
+  }
+
+  function qs() {
+    const q = elQ.value.trim();
+    const genre = elGenre.value.trim();
+    const limit = parseInt(elLimit.value, 10) || 20;
+
+    const params = new URLSearchParams();
+    if (q) params.set('q', q);
+    if (genre) params.set('genre', genre);
+    params.set('page', '1');
+    params.set('limit', String(limit));
+    return params.toString();
+  }
+
+  async function apiGet(path, opts = {}) {
+    elStatus.textContent = 'Loading...';
+    try {
+      const res = await fetch(path, {
+        credentials: 'same-origin',
+        cache: 'no-store',
+        ...opts
+      });
+      const text = await res.text();
+
+      let data = null;
+      try { data = text ? JSON.parse(text) : null; }
+      catch { data = { raw: text }; }
+
+      if (!res.ok) {
+        const msg = (data && (data.error || data.message)) ? (data.error || data.message) : ('HTTP ' + res.status);
+        throw new Error(msg);
+      }
+      return data;
+    } finally {
+      elStatus.textContent = '';
+    }
+  }
+
+  function showError(err) {
+    elView.innerHTML = `<div class="card"><div class="error"><b>Error:</b> ${escapeHtml(err?.message || err)}</div></div>`;
+  }
+
+  let viewToken = 0;
+  function nextToken(){ viewToken += 1; return viewToken; }
+  function isTokenAlive(t){ return t === viewToken; }
+
+  // ============ Artists ============
+  async function showArtists() {
+    const t = nextToken();
+    try {
+      const data = await apiGet(`/api/content/artists?${qs()}`);
+      if (!isTokenAlive(t)) return;
+      renderArtists(data.items || [], data.total, data.page, data.limit);
+      hydrateGenres().catch(()=>{});
+    } catch (e) { if (isTokenAlive(t)) showError(e); }
+  }
+
+  function renderArtists(items, total, page, limit) {
+    const list = (items || []).map(a => {
+      const genres = (a.genres || []).map(g => `<span class="pill">${escapeHtml(g)}</span>`).join('');
+      return `
+        <div class="item">
+          <a href="#artist/${encodeURIComponent(a.id)}">
+            <b>${escapeHtml(a.name)}</b>
+            <div class="muted">${escapeHtml(a.bio || '')}</div>
+            <div style="margin-top:8px;">${genres}</div>
+          </a>
+        </div>`;
+    }).join('');
+
+    elView.innerHTML = `
+      <div class="grid">
+        <div class="card">
+          <h2 style="margin:0 0 6px 0; font-size:16px;">Artists</h2>
+          <div class="muted">total: ${total || 0} | page: ${page || 1} | limit: ${limit || 20}</div>
+          <div class="list">${list || '<div class="muted">No artists.</div>'}</div>
+        </div>
+
+        <div class="card">
+          <h2 style="margin:0 0 6px 0; font-size:16px;">Quick guide</h2>
+          <div class="muted">
+            - Artists → klik → Albums<br/>
+            - Album → klik → Songs<br/>
+            - Liste: prikazuju AVG rating<br/>
+            - Song detalj: prazne zvezdice + multi-vote guest
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // ============ Artist details ============
+  async function loadArtist(id) {
+    const t = nextToken();
+    try {
+      const data = await apiGet(`/api/content/artists/${encodeURIComponent(id)}?${qs()}`);
+      if (!isTokenAlive(t)) return;
+      renderArtist(data.artist, data.albums || { items: [] });
+      hydrateGenres().catch(()=>{});
+    } catch (e) { if (isTokenAlive(t)) showError(e); }
+  }
+
+  function renderArtist(artist, albumsPage) {
+    const a = artist || {};
+    const genres = (a.genres || []).map(g => `<span class="pill">${escapeHtml(g)}</span>`).join('');
+
+    const albums = (albumsPage.items || []).map(al => `
+      <div class="item">
+        <a href="#album/${encodeURIComponent(al.id)}">
+          <b>${escapeHtml(al.title)}</b>
+          <div class="muted">genre: ${escapeHtml(al.genre || '-')} | year: ${escapeHtml(al.release_year || '-')}</div>
+        </a>
+      </div>
+    `).join('');
+
+    elView.innerHTML = `
+      <div class="card">
+        <button class="ghost" onclick="history.back()">← Back</button>
+        <h2 style="margin:12px 0 6px 0; font-size:18px;">${escapeHtml(a.name || '')}</h2>
+        <div class="muted">${escapeHtml(a.bio || '')}</div>
+        <div style="margin-top:10px;">${genres}</div>
+        <hr style="border:0;border-top:1px solid rgba(255,255,255,0.08);margin:14px 0;">
+        <h3 style="margin:0 0 6px 0; font-size:14px;">Albums</h3>
+        <div class="muted">total: ${albumsPage.total || 0} | page: ${albumsPage.page || 1} | limit: ${albumsPage.limit || 20}</div>
+        <div class="list">${albums || '<div class="muted">No albums.</div>'}</div>
+      </div>
+    `;
+  }
+
+  // ============ Album details ============
+  async function loadAlbum(id) {
+    const t = nextToken();
+    try {
+      const data = await apiGet(`/api/content/albums/${encodeURIComponent(id)}?${qs()}`);
+      if (!isTokenAlive(t)) return;
+      renderAlbum(data.album, data.songs || { items: [] });
+      hydrateGenres().catch(()=>{});
+      decorateSongAverages().catch(()=>{});
+    } catch (e) { if (isTokenAlive(t)) showError(e); }
+  }
+
+  function renderAlbum(album, songsPage) {
+    const al = album || {};
+    const songs = (songsPage.items || []).map(s => `
+      <div class="item">
+        <div class="song-row">
+          <a href="#song/${encodeURIComponent(s.id)}">
+            <div><b>${escapeHtml(s.track_number)}.</b> ${escapeHtml(s.title)}</div>
+            <div class="muted">genre: ${escapeHtml(s.genre || '-')} | duration: ${escapeHtml(s.duration || 0)}s</div>
+          </a>
+          <div class="song-rating-box">
+            <div class="tiny">Avg rating:</div>
+            <div class="song-avg rating-box" data-song-id="${escapeHtml(s.id)}"></div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    elView.innerHTML = `
+      <div class="card">
+        <button class="ghost" onclick="history.back()">← Back</button>
+        <h2 style="margin:12px 0 6px 0; font-size:18px;">${escapeHtml(al.title || '')}</h2>
+        <div class="muted">genre: ${escapeHtml(al.genre || '-')} | year: ${escapeHtml(al.release_year || '-')}</div>
+        <hr style="border:0;border-top:1px solid rgba(255,255,255,0.08);margin:14px 0;">
+        <h3 style="margin:0 0 6px 0; font-size:14px;">Songs</h3>
+        <div class="muted">total: ${songsPage.total || 0} | page: ${songsPage.page || 1} | limit: ${songsPage.limit || 20}</div>
+        <div class="list">${songs || '<div class="muted">No songs.</div>'}</div>
+      </div>
+    `;
+  }
+
+  // ============ Song details ============
+  async function fetchSongStrict(id) {
+    const u1 = `/api/content/songs/${encodeURIComponent(id)}?t=${Date.now()}`;
+    const s1 = await apiGet(u1);
+    if (s1 && s1.id && String(s1.id) === String(id)) return s1;
+
+    const u2 = `/api/content/songs/${encodeURIComponent(id)}?t=${Date.now()}_${Math.random().toString(16).slice(2)}`;
+    const s2 = await apiGet(u2, { cache: 'reload' });
+    return s2;
+  }
+
+  async function loadSong(id) {
+    const t = nextToken();
+    try {
+      const song = await fetchSongStrict(id);
+      if (!isTokenAlive(t)) return;
+
+      if (song && song.id && String(song.id) !== String(id)) {
+        elView.innerHTML = `
+          <div class="card">
+            <div class="error"><b>Backend bug:</b> tražio si song_id <code>${escapeHtml(id)}</code>,
+            ali API je vratio song_id <code>${escapeHtml(song.id)}</code>.</div>
+            <div class="muted" style="margin-top:10px;">
+              Ovo nije frontend problem – mora se popraviti u content servisu ili api-gateway ruti za /content/songs/:id.
+            </div>
+            <pre style="white-space:pre-wrap; margin-top:10px; font-size:12px; color:#cfe0ff;">${escapeHtml(JSON.stringify(song, null, 2))}</pre>
+          </div>
+        `;
+        return;
+      }
+
+      renderSong(song, id);
+    } catch (e) { if (isTokenAlive(t)) showError(e); }
+  }
+
+  function renderSong(songObj, requestedId) {
+    const song = songObj || {};
+    const songId = requestedId;
+
+    elView.innerHTML = `
+      <div class="card">
+        <button class="ghost" onclick="history.back()">← Back</button>
+
+        <h2 style="margin:12px 0 6px 0; font-size:18px;">${escapeHtml(song.title || '')}</h2>
+        <div class="muted">genre: ${escapeHtml(song.genre || '-')} | duration: ${escapeHtml(song.duration || 0)}s</div>
+        <div class="muted" style="margin-top:6px;">song_id: <code>${escapeHtml(songId)}</code></div>
+        <div class="muted" style="margin-top:6px;">album_id: <code>${escapeHtml(song.album_id || '')}</code></div>
+
+        <hr style="border:0;border-top:1px solid rgba(255,255,255,0.08);margin:14px 0;">
+
+        <h3 style="margin:0 0 6px 0; font-size:14px;">Rating (guest)</h3>
+        <div class="muted">
+          - AVG rating se vidi na listama (album/search).<br/>
+          - Ovde su zvezdice uvek prazne (0.0) i možeš više puta da glasaš kao guest.
+        </div>
+
+        <div style="margin-top:10px;">
+          <div class="tiny">Current AVG:</div>
+          <div id="avgBox" class="rating-box"></div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <div class="tiny">Vote now:</div>
+          <div id="voteBox"></div>
+        </div>
+      </div>
+    `;
+
+    const avgBox = document.getElementById("avgBox");
+    const voteBox = document.getElementById("voteBox");
+
+    if (!window.MPRatings) {
+      voteBox.innerHTML = `<div class="error">ratings.js nije učitan.</div>`;
+      return;
+    }
+
+    if (window.MPRatings.attachAverageUI) {
+      window.MPRatings.attachAverageUI({ container: avgBox, songId });
+    } else {
+      avgBox.textContent = 'ratings.js nema attachAverageUI';
+    }
+
+    if (window.MPRatings.attachVoteUI) {
+      window.MPRatings.attachVoteUI({
+        container: voteBox,
+        songId,
+        onAfterVote: () => {
+          window.MPRatings.attachAverageUI && window.MPRatings.attachAverageUI({ container: avgBox, songId });
+          decorateSongAverages().catch(()=>{});
+        }
+      });
+    } else {
+      voteBox.innerHTML = `<div class="error">ratings.js nema attachVoteUI</div>`;
+    }
+  }
+
+  // ============ Search ============
+  function showSearch() {
+    elView.innerHTML = `
+      <div class="card">
+        <h2 style="margin:0 0 6px 0; font-size:16px;">Search</h2>
+        <div class="muted">Upiši nešto u gornji input (q) + Apply.</div>
+        <div class="tabs">
+          <div class="tab active" id="tabArtists">Artists</div>
+          <div class="tab" id="tabAlbums">Albums</div>
+          <div class="tab" id="tabSongs">Songs</div>
+        </div>
+        <div id="searchResults" style="margin-top:10px;"></div>
+      </div>
+    `;
+    document.getElementById('tabArtists').onclick = () => setTab('artists');
+    document.getElementById('tabAlbums').onclick = () => setTab('albums');
+    document.getElementById('tabSongs').onclick = () => setTab('songs');
+    runSearch();
+  }
+
+  let searchCache = null;
+  let activeTab = 'artists';
+
+  function setTab(t) {
+    activeTab = t;
+    document.getElementById('tabArtists')?.classList.toggle('active', t==='artists');
+    document.getElementById('tabAlbums')?.classList.toggle('active', t==='albums');
+    document.getElementById('tabSongs')?.classList.toggle('active', t==='songs');
+    renderSearchResults();
+    decorateSongAverages().catch(()=>{});
+  }
+
+  async function runSearch() {
+    const t = nextToken();
+    try {
+      const q = elQ.value.trim();
+      const box = document.getElementById('searchResults');
+      if (!box) return;
+
+      if (!q) {
+        searchCache = null;
+        box.innerHTML = `<div class="muted">Upiši nešto u search (q).</div>`;
+        return;
+      }
+
+      searchCache = await apiGet(`/api/content/search?${qs()}`);
+      if (!isTokenAlive(t)) return;
+
+      renderSearchResults();
+      hydrateGenres().catch(()=>{});
+      decorateSongAverages().catch(()=>{});
+    } catch (e) { if (isTokenAlive(t)) showError(e); }
+  }
+
+  function renderSearchResults() {
+    const box = document.getElementById('searchResults');
+    if (!box) return;
+
+    if (!searchCache) {
+      box.innerHTML = `<div class="muted">Upiši nešto u search (q).</div>`;
+      return;
+    }
+
+    const data = searchCache[activeTab] || { items: [] };
+    const items = data.items || [];
+
+    if (activeTab === 'artists') {
+      box.innerHTML = `
+        <div class="muted">total: ${data.total || 0} | page: ${data.page || 1} | limit: ${data.limit || 20}</div>
+        <div class="list">
+          ${(items.map(a => `
+            <div class="item">
+              <a href="#artist/${encodeURIComponent(a.id)}">
+                <b>${escapeHtml(a.name)}</b>
+                <div class="muted">${escapeHtml(a.bio || '')}</div>
+              </a>
+            </div>
+          `).join('')) || '<div class="muted">No results.</div>'}
+        </div>
+      `;
+      return;
+    }
+
+    if (activeTab === 'albums') {
+      box.innerHTML = `
+        <div class="muted">total: ${data.total || 0} | page: ${data.page || 1} | limit: ${data.limit || 20}</div>
+        <div class="list">
+          ${(items.map(al => `
+            <div class="item">
+              <a href="#album/${encodeURIComponent(al.id)}">
+                <b>${escapeHtml(al.title)}</b>
+                <div class="muted">genre: ${escapeHtml(al.genre || '-')} | year: ${escapeHtml(al.release_year || '-')}</div>
+              </a>
+            </div>
+          `).join('')) || '<div class="muted">No results.</div>'}
+        </div>
+      `;
+      return;
+    }
+
+    box.innerHTML = `
+      <div class="muted">total: ${data.total || 0} | page: ${data.page || 1} | limit: ${data.limit || 20}</div>
+      <div class="list">
+        ${(items.map(s => `
+          <div class="item">
+            <div class="song-row">
+              <a href="#song/${encodeURIComponent(s.id)}">
+                <div><b>${escapeHtml(s.title)}</b></div>
+                <div class="muted">genre: ${escapeHtml(s.genre || '-')} | duration: ${escapeHtml(s.duration || 0)}s</div>
+              </a>
+              <div class="song-rating-box">
+                <div class="tiny">Avg rating:</div>
+                <div class="song-avg rating-box" data-song-id="${escapeHtml(s.id)}"></div>
+              </div>
+            </div>
+          </div>
+        `).join('')) || '<div class="muted">No results.</div>'}
+      </div>
+    `;
+  }
+
+  async function decorateSongAverages() {
+    if (!window.MPRatings || !window.MPRatings.attachAverageUI) return;
+
+    const shells = document.querySelectorAll('.song-avg[data-song-id]');
+    if (!shells.length) return;
+
+    for (const shell of shells) {
+      const songId = String(shell.getAttribute('data-song-id') || '').trim();
+      if (!songId) continue;
+      window.MPRatings.attachAverageUI({ container: shell, songId });
+    }
+  }
+
+  async function hydrateGenres() {
+    if (elGenre.options.length > 1) return;
+    try {
+      const data = await apiGet('/api/content/artists?page=1&limit=100');
+      const items = data.items || [];
+      const set = new Set();
+      items.forEach(a => (a.genres||[]).forEach(g => set.add(g)));
+      const genres = Array.from(set).sort((a,b)=>a.localeCompare(b));
+
+      genres.forEach(g => {
+        const opt = document.createElement('option');
+        opt.value = g;
+        opt.textContent = g;
+        elGenre.appendChild(opt);
+      });
+    } catch (e) {}
+  }
+
+  function handleRoute(reapply=false) {
+    if (!location.hash) location.hash = '#artists';
+    const h = location.hash;
+
+    if (h === '#artists') { showArtists(); return; }
+
+    if (h === '#search') {
+      if (reapply && document.getElementById('searchResults')) runSearch();
+      else showSearch();
+      return;
+    }
+
+    if (h.startsWith('#artist/')) { loadArtist(decodeURIComponent(h.split('/')[1] || '')); return; }
+    if (h.startsWith('#album/'))  { loadAlbum(decodeURIComponent(h.split('/')[1] || '')); return; }
+    if (h.startsWith('#song/'))   { loadSong(decodeURIComponent(h.split('/')[1] || '')); return; }
+
+    location.hash = '#artists';
+  }
+
+  window.onhashchange = () => handleRoute(false);
+  handleRoute(false);
+</script>
+</body>
+</html>

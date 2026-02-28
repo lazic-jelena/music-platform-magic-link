@@ -1,0 +1,12 @@
+go 1.22
+
+use (
+	./services/api-gateway
+	./services/content
+	./services/ratings
+	./services/users
+	./services/subscriptions
+	./services/notifications
+	./services/recommendation
+	./services/analytics
+)

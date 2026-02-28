@@ -1,0 +1,1296 @@
+[{
+  "_id": {
+    "$oid": "6966e4ed0db85812125ef0c2"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_bf6f513234e0119bb9ee330e",
+  "created_at": {
+    "$date": "2026-01-14T00:35:57.383Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T00:38:14.624Z"
+  },
+  "value": 4.5
+},
+{
+  "_id": {
+    "$oid": "6967e7fc803d402354c939b1"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_3715c0fd1a1f319bbde23301",
+  "created_at": {
+    "$date": "2026-01-14T19:01:16.684Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T19:01:31.045Z"
+  },
+  "value": 1.5
+},
+{
+  "_id": {
+    "$oid": "6967ff0c226e27cb9b526e15"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_c6de89eaec4ac819bbe3c3cf1",
+  "created_at": {
+    "$date": "2026-01-14T20:39:40.162Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T20:41:48.004Z"
+  },
+  "value": 4
+},
+{
+  "_id": {
+    "$oid": "696805c9c8c29de694b23585"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_907a3943ac149819bbe5690c6",
+  "created_at": {
+    "$date": "2026-01-14T21:08:25.621Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T21:40:47.221Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "69680c7a93a13022c59df0aa"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "user_id": "guest_907a3943ac149819bbe5690c6",
+  "created_at": {
+    "$date": "2026-01-14T21:36:58.484Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T21:37:44.831Z"
+  },
+  "value": 3
+},
+{
+  "_id": {
+    "$oid": "69681db4bb3d39d889ab57d5"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "user_id": "guest_beb9eda535051819bbeb408a1_vote_274e86cfd3aec819bbeb408a1",
+  "created_at": {
+    "$date": "2026-01-14T22:50:28.397Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T22:50:28.397Z"
+  },
+  "value": 1.5
+},
+{
+  "_id": {
+    "$oid": "69681db6bb3d39d889ab57dd"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "user_id": "guest_beb9eda535051819bbeb408a1_vote_d0c6425c1510b819bbeb40ee6",
+  "created_at": {
+    "$date": "2026-01-14T22:50:30.003Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T22:50:30.003Z"
+  },
+  "value": 2.5
+},
+{
+  "_id": {
+    "$oid": "69681db8bb3d39d889ab57e4"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "user_id": "guest_beb9eda535051819bbeb408a1_vote_81edbc3688d06819bbeb41a39",
+  "created_at": {
+    "$date": "2026-01-14T22:50:32.895Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T22:50:32.895Z"
+  },
+  "value": 3
+},
+{
+  "_id": {
+    "$oid": "69681dbbbb3d39d889ab57ee"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "user_id": "guest_beb9eda535051819bbeb408a1_vote_d5fa92f96c5619bbeb424de",
+  "created_at": {
+    "$date": "2026-01-14T22:50:35.620Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T22:50:35.620Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "69681dbfbb3d39d889ab5801"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "user_id": "guest_beb9eda535051819bbeb408a1_vote_98ed3061ad20619bbeb433fc",
+  "created_at": {
+    "$date": "2026-01-14T22:50:39.490Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T22:50:39.490Z"
+  },
+  "value": 0.5
+},
+{
+  "_id": {
+    "$oid": "69681e3ebb3d39d889ab58ab"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_beb9eda535051819bbeb408a1_vote_7526e948d7da7819bbeb625d8",
+  "created_at": {
+    "$date": "2026-01-14T22:52:46.944Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T22:52:46.944Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "69681e40bb3d39d889ab58b2"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_beb9eda535051819bbeb408a1_vote_9ba5f67e4f9a3819bbeb62cc2",
+  "created_at": {
+    "$date": "2026-01-14T22:52:48.716Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T22:52:48.716Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "69681e42bb3d39d889ab58ba"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_beb9eda535051819bbeb408a1_vote_bc90778e055b819bbeb63448",
+  "created_at": {
+    "$date": "2026-01-14T22:52:50.646Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T22:52:50.646Z"
+  },
+  "value": 4
+},
+{
+  "_id": {
+    "$oid": "69681e44bb3d39d889ab58c1"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_beb9eda535051819bbeb408a1_vote_823d9c6d092f19bbeb63cae",
+  "created_at": {
+    "$date": "2026-01-14T22:52:52.791Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T22:52:52.791Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "6968262b87e7e1edd2284173"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_a508d3b882fe7819bbed518f2",
+  "created_at": {
+    "$date": "2026-01-14T23:26:35.260Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:35.260Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "6968263287e7e1edd2284190"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_3adc616c2a920819bbed53680",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:42.824Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:42.824Z"
+  },
+  "value": 1.5
+},
+{
+  "_id": {
+    "$oid": "6968263387e7e1edd2284197"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_11d046160318d19bbed53915",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:43.485Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:43.485Z"
+  },
+  "value": 1.5
+},
+{
+  "_id": {
+    "$oid": "6968263487e7e1edd228419e"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_611257cb38d9b19bbed53b67",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:44.076Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:44.076Z"
+  },
+  "value": 1.5
+},
+{
+  "_id": {
+    "$oid": "6968263687e7e1edd22841a9"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_92a34b473fc72819bbed543ed",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:46.262Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:46.262Z"
+  },
+  "value": 1.5
+},
+{
+  "_id": {
+    "$oid": "6968263887e7e1edd22841b0"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_8bca2a3220f05819bbed54e65",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:48.939Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:48.939Z"
+  },
+  "value": 2.5
+},
+{
+  "_id": {
+    "$oid": "6968263a87e7e1edd22841b7"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_c41acde491338819bbed552ab",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:50.034Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:50.034Z"
+  },
+  "value": 3
+},
+{
+  "_id": {
+    "$oid": "6968263b87e7e1edd22841be"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_a05762fded8d4819bbed55804",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:51.406Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:51.406Z"
+  },
+  "value": 4
+},
+{
+  "_id": {
+    "$oid": "6968263d87e7e1edd22841c5"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_9bf17eeadc3d19bbed55f05",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:53.196Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:53.196Z"
+  },
+  "value": 2.5
+},
+{
+  "_id": {
+    "$oid": "6968263e87e7e1edd22841d0"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_a61771eebd88a19bbed565c9",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:54.928Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:54.928Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "6968263f87e7e1edd22841d7"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_9c8d92e9f9931819bbed56839",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:55.552Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:55.552Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "6968264087e7e1edd22841de"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_1082cfbedd71b819bbed56d11",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:26:56.792Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:26:56.792Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "6968264487e7e1edd22841e5"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_1bd0e71ec8a5a819bbed57d71",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:00.983Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:00.983Z"
+  },
+  "value": 4.5
+},
+{
+  "_id": {
+    "$oid": "6968264587e7e1edd22841ec"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_70b1c4e5ace13819bbed5812d",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:01.938Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:01.938Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "6968264e87e7e1edd2284201"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_78c86eadbaa24819bbed5a13b",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:10.146Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:10.146Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "6968264e87e7e1edd2284208"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_fece0fce5400c19bbed5a447",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:10.926Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:10.926Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "6968265087e7e1edd228420f"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_871258ff702f3819bbed5aa23",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:12.428Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:12.428Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "6968265187e7e1edd2284216"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_a01ede594f828819bbed5ad4f",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:13.238Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:13.238Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "6968265187e7e1edd228421d"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_c78b14bfd96c219bbed5af3d",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:13.732Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:13.732Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "6968265287e7e1edd2284224"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_d31f4d5a510a9819bbed5b185",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:14.317Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:14.317Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "6968265387e7e1edd228422f"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_71eb38af85b69819bbed5b7c1",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:15.912Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:15.912Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "6968265487e7e1edd2284236"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_b6db1cef7a7d3819bbed5ba41",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:16.553Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:16.553Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "6968265587e7e1edd228423d"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_1c991cae6431d819bbed5bc85",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:17.132Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:17.132Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "6968265587e7e1edd2284244"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_17512d92126f4819bbed5bf3b",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:17.826Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:17.826Z"
+  },
+  "value": 4.5
+},
+{
+  "_id": {
+    "$oid": "6968265687e7e1edd228424b"
+  },
+  "user_id": "guest_1cdae044c837a819bbed518f2_vote_8ea57f385ec9c19bbed5c223",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00132"
+  },
+  "created_at": {
+    "$date": "2026-01-14T23:27:18.571Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-14T23:27:18.571Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "69697dca5c4123010e07d5af"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_0599bcdf87428819bc4135fba_vote_1675e8dc4905a19bc4135fba",
+  "created_at": {
+    "$date": "2026-01-15T23:52:42.689Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-15T23:52:42.689Z"
+  },
+  "value": 0.5
+},
+{
+  "_id": {
+    "$oid": "69697de05c4123010e07d5dd"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_0599bcdf87428819bc4135fba_vote_3af8848828ad419bc413b659",
+  "created_at": {
+    "$date": "2026-01-15T23:53:04.863Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-15T23:53:04.863Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "69697df45c4123010e07d62a"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_0599bcdf87428819bc4135fba_vote_b951ef07f264519bc41404a5",
+  "created_at": {
+    "$date": "2026-01-15T23:53:24.922Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-15T23:53:24.922Z"
+  },
+  "value": 3
+},
+{
+  "_id": {
+    "$oid": "69697df55c4123010e07d631"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_0599bcdf87428819bc4135fba_vote_53d6235837b6b819bc41408a9",
+  "created_at": {
+    "$date": "2026-01-15T23:53:25.937Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-15T23:53:25.937Z"
+  },
+  "value": 3
+},
+{
+  "_id": {
+    "$oid": "69697df65c4123010e07d638"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_0599bcdf87428819bc4135fba_vote_7ae3f50a07ce19bc4140c2f",
+  "created_at": {
+    "$date": "2026-01-15T23:53:26.838Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-15T23:53:26.838Z"
+  },
+  "value": 3
+},
+{
+  "_id": {
+    "$oid": "69697df75c4123010e07d645"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_0599bcdf87428819bc4135fba_vote_4cf5a08d10853819bc4141029",
+  "created_at": {
+    "$date": "2026-01-15T23:53:27.857Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-15T23:53:27.857Z"
+  },
+  "value": 3
+},
+{
+  "_id": {
+    "$oid": "69697df85c4123010e07d64c"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00133"
+  },
+  "user_id": "guest_0599bcdf87428819bc4135fba_vote_509ebe6dea0a119bc4141367",
+  "created_at": {
+    "$date": "2026-01-15T23:53:28.686Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-15T23:53:28.686Z"
+  },
+  "value": 3
+},
+{
+  "_id": {
+    "$oid": "6969809882d214aaad5f1fb8"
+  },
+  "user_id": "guest_0599bcdf87428819bc4135fba_vote_ec83382ab711519bc41e5305",
+  "song_id": {
+    "$oid": "69698048e2a32d6f57ec359a"
+  },
+  "created_at": {
+    "$date": "2026-01-16T00:04:40.331Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:04:40.331Z"
+  },
+  "value": 4.5
+},
+{
+  "_id": {
+    "$oid": "6969809b82d214aaad5f1fe0"
+  },
+  "song_id": {
+    "$oid": "69698048e2a32d6f57ec359b"
+  },
+  "user_id": "guest_0599bcdf87428819bc4135fba_vote_a10a23527f31e819bc41e5e3d",
+  "created_at": {
+    "$date": "2026-01-16T00:04:43.203Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:04:43.203Z"
+  },
+  "value": 1.5
+},
+{
+  "_id": {
+    "$oid": "6969809e82d214aaad5f2001"
+  },
+  "user_id": "guest_0599bcdf87428819bc4135fba_vote_e8ba5652347f5819bc41e6993",
+  "song_id": {
+    "$oid": "69698048e2a32d6f57ec359b"
+  },
+  "created_at": {
+    "$date": "2026-01-16T00:04:46.105Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:04:46.105Z"
+  },
+  "value": 4
+},
+{
+  "_id": {
+    "$oid": "696a6e92ce5e70bfc7a7dcee"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_389ccf79cd83b819bc7bfeb00",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-16T17:00:02.189Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:00:02.189Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6e93ce5e70bfc7a7dcf5"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_45b35a408ebee19bc7bff0a6",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-16T17:00:03.630Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:00:03.630Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6e94ce5e70bfc7a7dcfc"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_b141fe76f46519bc7bff48c",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-16T17:00:04.632Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:00:04.632Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6e95ce5e70bfc7a7dd09"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_1db34a79fa232819bc7bff757",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-16T17:00:05.340Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:00:05.340Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6e96ce5e70bfc7a7dd10"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_0eede800d109a819bc7bffa6e",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-16T17:00:06.132Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:00:06.132Z"
+  },
+  "value": 4.5
+},
+{
+  "_id": {
+    "$oid": "696a6e96ce5e70bfc7a7dd17"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_2d03e3798903919bc7bffc60",
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00131"
+  },
+  "created_at": {
+    "$date": "2026-01-16T17:00:06.629Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:00:06.629Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6ec6ce5e70bfc7a7dd9b"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_c915eb4217948819bc7c0b712",
+  "created_at": {
+    "$date": "2026-01-16T17:00:54.429Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:00:54.429Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "696a6ec7ce5e70bfc7a7dda6"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_0baeeb274bf99819bc7c0ba13",
+  "created_at": {
+    "$date": "2026-01-16T17:00:55.197Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:00:55.197Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "696a6ec7ce5e70bfc7a7ddaf"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_a86c381ef69fa19bc7c0bbfd",
+  "created_at": {
+    "$date": "2026-01-16T17:00:55.689Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:00:55.689Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "696a6ec8ce5e70bfc7a7ddb6"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_cac915aded3b19bc7c0bec1",
+  "created_at": {
+    "$date": "2026-01-16T17:00:56.394Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:00:56.394Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "696a6ed0ce5e70bfc7a7ddec"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_f63f2b68b78da19bc7c0deb7",
+  "created_at": {
+    "$date": "2026-01-16T17:01:04.576Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:01:04.576Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6ed1ce5e70bfc7a7ddf9"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_935a0f69be70f19bc7c0e1ee",
+  "created_at": {
+    "$date": "2026-01-16T17:01:05.394Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:01:05.394Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6ef8ce5e70bfc7a7de16"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_08e0fb70d612f19bc7c1797b",
+  "created_at": {
+    "$date": "2026-01-16T17:01:44.196Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:01:44.196Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6ef9ce5e70bfc7a7de23"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_1587b120d337219bc7c17fd1",
+  "created_at": {
+    "$date": "2026-01-16T17:01:45.818Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:01:45.818Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6efbce5e70bfc7a7de2a"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_a5ba62c1cd66d819bc7c184ec",
+  "created_at": {
+    "$date": "2026-01-16T17:01:47.124Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:01:47.124Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6efece5e70bfc7a7de31"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_d7756dd262e5719bc7c19162",
+  "created_at": {
+    "$date": "2026-01-16T17:01:50.319Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:01:50.319Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6effce5e70bfc7a7de38"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_f4d7615f50aee819bc7c19417",
+  "created_at": {
+    "$date": "2026-01-16T17:01:51.007Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:01:51.007Z"
+  },
+  "value": 5
+},
+{
+  "_id": {
+    "$oid": "696a6f03ce5e70bfc7a7de46"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_6caa8f1c0f66c19bc7c1a5cc",
+  "created_at": {
+    "$date": "2026-01-16T17:01:55.540Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:01:55.540Z"
+  },
+  "value": 0
+},
+{
+  "_id": {
+    "$oid": "696a6f07ce5e70bfc7a7de4d"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_0500bf9fee507819bc7c1b503",
+  "created_at": {
+    "$date": "2026-01-16T17:01:59.436Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:01:59.436Z"
+  },
+  "value": 3
+},
+{
+  "_id": {
+    "$oid": "696a6f09ce5e70bfc7a7de54"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_f03522b57dd0b819bc7c1bb6f",
+  "created_at": {
+    "$date": "2026-01-16T17:02:01.080Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:01.080Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f09ce5e70bfc7a7de5c"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_3aed95241e460819bc7c1bd8e",
+  "created_at": {
+    "$date": "2026-01-16T17:02:01.623Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:01.623Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f0ace5e70bfc7a7de63"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_d51dd9a30887a19bc7c1c24b",
+  "created_at": {
+    "$date": "2026-01-16T17:02:02.836Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:02.836Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f0bce5e70bfc7a7de6a"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_4bac78db5543119bc7c1c4f7",
+  "created_at": {
+    "$date": "2026-01-16T17:02:03.521Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:03.521Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f0cce5e70bfc7a7de71"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_6b594699868b2819bc7c1c837",
+  "created_at": {
+    "$date": "2026-01-16T17:02:04.353Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:04.353Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f0cce5e70bfc7a7de78"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_8af7de11982ea19bc7c1ca74",
+  "created_at": {
+    "$date": "2026-01-16T17:02:04.924Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:04.924Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f0dce5e70bfc7a7de85"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_87d403b1fcf9b19bc7c1cd7f",
+  "created_at": {
+    "$date": "2026-01-16T17:02:05.699Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:05.699Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f0ece5e70bfc7a7de8c"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_c3592b3fd00f719bc7c1cfdf",
+  "created_at": {
+    "$date": "2026-01-16T17:02:06.308Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:06.308Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f0ece5e70bfc7a7de93"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_7ea1600297fe3819bc7c1d25d",
+  "created_at": {
+    "$date": "2026-01-16T17:02:06.947Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:06.947Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f0fce5e70bfc7a7de9a"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_36d48f3ba7962819bc7c1d5cd",
+  "created_at": {
+    "$date": "2026-01-16T17:02:07.826Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:07.826Z"
+  },
+  "value": 3
+},
+{
+  "_id": {
+    "$oid": "696a6f10ce5e70bfc7a7dea1"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_2a6a561a8628f819bc7c1d791",
+  "created_at": {
+    "$date": "2026-01-16T17:02:08.278Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:08.278Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f11ce5e70bfc7a7dea8"
+  },
+  "song_id": {
+    "$oid": "69542e956bc657a44fb00134"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_07857607f12a5819bc7c1db97",
+  "created_at": {
+    "$date": "2026-01-16T17:02:09.309Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:09.309Z"
+  },
+  "value": 3.5
+},
+{
+  "_id": {
+    "$oid": "696a6f38ce5e70bfc7a7df44"
+  },
+  "user_id": "guest_5441ce2141a2f19bc7bfeb00_vote_acece85cb8c4e19bc7c27459",
+  "song_id": {
+    "$oid": "69698048e2a32d6f57ec3524"
+  },
+  "created_at": {
+    "$date": "2026-01-16T17:02:48.417Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T17:02:48.417Z"
+  },
+  "value": 5
+}]

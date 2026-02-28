@@ -1,0 +1,287 @@
+{
+  "info": {
+    "_postman_id": "41ff7f1f-a689-45cf-ba3f-7c1cf696ad74",
+    "name": "Music Platform - Gateway Content Browse & Filter",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Requests for API Gateway -> Content browse/filter/search endpoints.\nBase URL: {{baseUrl}} (default http://localhost:8080)\n\nAssumes gateway exposes:\n- /healthz\n- /api/content/artists, /api/content/artists/:id\n- /api/content/albums, /api/content/albums/:id\n- /api/content/songs\n- /api/content/search"
+  },
+  "item": [
+    {
+      "name": "Healthz",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/healthz"
+        }
+      }
+    },
+    {
+      "name": "Artists - list (filter/search)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+              "try {",
+              "  const json = pm.response.json();",
+              "  if (json && json.items && json.items.length > 0 && json.items[0].id) {",
+              "    pm.environment.set('artistId', json.items[0].id);",
+              "  }",
+              "} catch (e) {}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/content/artists?page=1&limit=20&genre=&q=",
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "20"
+            },
+            {
+              "key": "genre",
+              "value": ""
+            },
+            {
+              "key": "q",
+              "value": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Artist - details + albums (composition)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/content/artists/{{artistId}}?page=1&limit=20&q=&genre=",
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "20"
+            },
+            {
+              "key": "q",
+              "value": ""
+            },
+            {
+              "key": "genre",
+              "value": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Albums - list (filter/search)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+              "try {",
+              "  const json = pm.response.json();",
+              "  if (json && json.items && json.items.length > 0 && json.items[0].id) {",
+              "    pm.environment.set('albumId', json.items[0].id);",
+              "  }",
+              "} catch (e) {}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/content/albums?page=1&limit=20&artistId=&genre=&q=",
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "20"
+            },
+            {
+              "key": "artistId",
+              "value": ""
+            },
+            {
+              "key": "genre",
+              "value": ""
+            },
+            {
+              "key": "q",
+              "value": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Album - details + songs (composition)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/content/albums/{{albumId}}?page=1&limit=50&q=&genre=",
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "50"
+            },
+            {
+              "key": "q",
+              "value": ""
+            },
+            {
+              "key": "genre",
+              "value": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Songs - list (filter/search)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/content/songs?page=1&limit=50&artistId=&albumId=&genre=&q=",
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "50"
+            },
+            {
+              "key": "artistId",
+              "value": ""
+            },
+            {
+              "key": "albumId",
+              "value": ""
+            },
+            {
+              "key": "genre",
+              "value": ""
+            },
+            {
+              "key": "q",
+              "value": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search - all (artists+albums+songs)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/content/search?q=a&page=1&limit=20&genre=",
+          "query": [
+            {
+              "key": "q",
+              "value": "a"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "20"
+            },
+            {
+              "key": "genre",
+              "value": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ADMIN - Create artist (requires X-User-Role: A)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-User-Role",
+            "value": "{{roleAdmin}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test Artist\",\n  \"bio\": \"Bio text\",\n  \"genres\": [\n    \"Rock\",\n    \"Pop\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/content/artists"
+        }
+      }
+    }
+  ]
+}

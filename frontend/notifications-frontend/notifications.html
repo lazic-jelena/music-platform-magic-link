@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Music Platform - Notifications</title>
+  <style>
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .role-toggle {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .role-toggle label {
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .toggle-switch.active {
+            background: #4ade80;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .toggle-switch.active .toggle-slider {
+            transform: translateX(30px);
+        }
+
+        .tabs {
+            display: flex;
+            background: #f3f4f6;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: #6b7280;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            background: #e5e7eb;
+        }
+
+        .tab.active {
+            color: #667eea;
+            background: white;
+            border-bottom-color: #667eea;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .form-section {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .form-section h3 {
+            margin-bottom: 20px;
+            color: #374151;
+            font-size: 1.3em;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #4b5563;
+            font-size: 0.9em;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            padding: 10px;
+            border: 2px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-hint {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 3px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1em;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-edit {
+            background: #f59e0b;
+            color: white;
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+
+        .btn-edit:hover {
+            background: #d97706;
+        }
+
+        .btn-delete {
+            background: #ef4444;
+            color: white;
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+
+        .btn-delete:hover {
+            background: #dc2626;
+        }
+
+        .items-list {
+            margin-top: 30px;
+        }
+
+        .items-list h3 {
+            margin-bottom: 20px;
+            color: #374151;
+            font-size: 1.3em;
+        }
+
+        .item-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+        }
+
+        .item-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+        }
+
+        .item-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .item-details {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .item-details p {
+            margin-bottom: 8px;
+        }
+
+        .item-details strong {
+            color: #374151;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #dbeafe;
+            color: #1e40af;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .message.success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 2px solid #10b981;
+        }
+
+        .message.error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 2px solid #ef4444;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6b7280;
+            font-size: 1.1em;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #9ca3af;
+        }
+
+        .empty-state svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+  /* Small additions for notifications list */
+  .pill {
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:12px;
+    border:1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.06);
+  }
+  .muted { opacity: .8; }
+  .row {
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    align-items:flex-end;
+  }
+  .row > .field { flex: 1 1 220px; }
+  .field label {
+    display:block;
+    font-size:12px;
+    opacity:.85;
+    margin: 0 0 6px;
+  }
+  .field input, .field select {
+    width:100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(0,0,0,0.15);
+    color: inherit;
+    outline: none;
+  }
+  .field input::placeholder { color: rgba(255,255,255,0.55); }
+  .card .meta {
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top: 10px;
+  }
+  .card .title {
+    display:flex;
+    gap:10px;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .empty {
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px dashed rgba(255,255,255,0.18);
+    opacity: .85;
+  }
+  pre.json {
+    white-space: pre-wrap;
+    word-break: break-word;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.18);
+    overflow:auto;
+    max-height: 360px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">MP</div>
+        <div>
+          <div class="brand-title">Music Platform</div>
+          <div class="brand-subtitle">Notifications (RK)</div>
+        </div>
+      </div>
+
+      <div class="role">
+        <span class="pill">Role: <strong id="roleLabel">RK</strong></span>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="panel">
+        <h2>Pregled notifikacija</h2>
+        <p class="muted">
+          Ručno popunjujemo Cassandra db. Kroz ovaj UI pokazujemo da ovaj endpoint vraća notifikacije za korisnika.
+        </p>
+        <div class="row">
+          <div class="field">
+            <label>Base URL</label>
+            <input id="baseUrl" placeholder="http://localhost:8085" value="http://localhost:8085" />
+          </div>
+
+          <div class="field">
+            <label>Path</label>
+            <select id="path">
+              <option value="/notifications">/notifications (direct service)</option>
+              <option value="/api/notifications">/api/notifications (if API gateway routes this)</option>
+              <option value="/api/notifications/notifications">/api/notifications/notifications (fallback)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>User ID</label>
+            <input id="userId" placeholder="e.g. user-1" value="user-1" />
+          </div>
+
+          <div class="field" style="flex: 0 0 auto;">
+            <button class="btn primary" id="btnFetch">Fetch</button>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 12px;">
+          <button class="btn" id="btnSeedHint">Show CQL seed example</button>
+          <button class="btn" id="btnClear">Clear</button>
+        </div>
+
+        <div id="seedHint" style="display:none; margin-top: 12px;">
+          <pre class="json" id="seedText"></pre>
+        </div>
+
+        <div class="divider"></div>
+        <br>
+        <div class="row" style="align-items:center;">
+          <h3 style="margin:0;">Results</h3>
+          <span id="status" class="pill muted">Idle</span>
+        </div>
+
+        <div id="results" style="margin-top: 14px;"></div>
+
+        <details style="margin-top: 14px;">
+          <summary class="muted">Raw response</summary>
+          <pre class="json" id="raw"></pre>
+        </details>
+      </section>
+    </main>
+  </div>
+
+<script>
+  // --- Config ---
+  const DEFAULT_TIMEOUT_MS = 8000;
+
+  function qs(id) { return document.getElementById(id); }
+
+  function buildUrl() {
+    const base = qs('baseUrl').value.trim().replace(/\/$/, '');
+    const path = qs('path').value.trim();
+    const userId = qs('userId').value.trim();
+    const url = new URL(base + path);
+    url.searchParams.set('userId', userId);
+    return url.toString();
+  }
+
+  function setStatus(text, kind='muted') {
+    const el = qs('status');
+    el.textContent = text;
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
+  }
+
+  function fmtDate(isoOrTs) {
+    const d = new Date(isoOrTs);
+    if (Number.isNaN(d.getTime())) return String(isoOrTs);
+    return d.toLocaleString();
+  }
+
+  function renderList(data) {
+    const root = qs('results');
+    root.innerHTML = '';
+
+    if (data === null) {
+      root.innerHTML = '<div class="empty">No data (null). This typically means the service returned <code>null</code> instead of <code>[]</code>.</div>';
+      return;
+    }
+
+    if (!Array.isArray(data) || data.length === 0) {
+      root.innerHTML = '<div class="empty">No notifications for this user.</div>';
+      return;
+    }
+
+    data.sort((a,b) => new Date(b.created_at||0) - new Date(a.created_at||0));
+
+    for (const n of data) {
+      const type = escapeHtml(n.type ?? 'UNKNOWN');
+      const msg  = escapeHtml(n.message ?? '');
+      const nid  = escapeHtml(n.notification_id ?? '');
+      const uid  = escapeHtml(n.user_id ?? '');
+      const created = fmtDate(n.created_at ?? '');
+
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="title">
+          <div style="display:flex; gap:10px; align-items:center;">
+            <span class="pill">${type}</span>
+            <strong>#${nid}</strong>
+          </div>
+          <span class="muted">${created}</span>
+        </div>
+        <div style="margin-top:10px;">${msg}</div>
+        <div class="meta">
+          <span class="pill muted">user: ${uid}</span>
+        </div>
+      `;
+      root.appendChild(card);
+    }
+  }
+
+  async function fetchWithTimeout(url, opts={}) {
+    const controller = new AbortController();
+    const t = setTimeout(() => controller.abort(), DEFAULT_TIMEOUT_MS);
+    try {
+      const res = await fetch(url, { ...opts, signal: controller.signal });
+      return res;
+    } finally {
+      clearTimeout(t);
+    }
+  }
+
+  async function onFetch() {
+    const url = buildUrl();
+    setStatus('Loading...');
+    qs('raw').textContent = '';
+    qs('results').innerHTML = '';
+
+    try {
+      const res = await fetchWithTimeout(url, {
+        headers: { 'Accept': 'application/json' }
+      });
+
+      const text = await res.text();
+      qs('raw').textContent = text;
+
+      if (!res.ok) {
+        setStatus(`HTTP ${res.status} - ${res.statusText}`);
+        qs('results').innerHTML = `<div class="empty">Request failed. Check the Raw response.</div>`;
+        return;
+      }
+
+      let json = null;
+      try {
+        json = text ? JSON.parse(text) : null;
+      } catch (e) {
+        setStatus('OK, but not JSON');
+        qs('results').innerHTML = `<div class="empty">Response is not valid JSON. See Raw response.</div>`;
+        return;
+      }
+
+      setStatus('OK 200');
+      renderList(json);
+
+    } catch (e) {
+      setStatus('Error');
+      qs('results').innerHTML = `<div class="empty">Error: ${escapeHtml(e.message || String(e))}</div>`;
+    }
+  }
+
+  function onClear() {
+    setStatus('Idle');
+    qs('results').innerHTML = '';
+    qs('raw').textContent = '';
+  }
+
+  function onSeedHint() {
+    const box = qs('seedHint');
+    const isHidden = box.style.display === 'none';
+    box.style.display = isHidden ? 'block' : 'none';
+
+    qs('seedText').textContent =
+`-- In cqlsh:
+USE notifications;
+INSERT INTO notifications_by_user (user_id, created_at, notification_id, type, message)
+VALUES ('user-1', toTimestamp(now()), 'notif-1', 'SUBSCRIPTION', 'New album from an artist you follow.');
+INSERT INTO notifications_by_user (user_id, created_at, notification_id, type, message)
+VALUES ('user-1', toTimestamp(now()), 'notif-2', 'SONG', 'New song released by your subscribed artist.');
+`;
+  }
+
+  qs('btnFetch').addEventListener('click', onFetch);
+  qs('btnClear').addEventListener('click', onClear);
+  qs('btnSeedHint').addEventListener('click', onSeedHint);
+
+  ['baseUrl','userId'].forEach(id => qs(id).addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') onFetch();
+  }));
+</script>
+</body>
+</html>

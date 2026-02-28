@@ -1,0 +1,294 @@
+name: music-platform
+
+networks:
+  app-net:
+    driver: bridge
+
+volumes:
+  mongo_data:
+  cassandra_data:
+  neo4j_data:
+  redis_data:
+  rabbitmq_data:
+  hdfs_namenode:
+  hdfs_datanode:
+
+services:
+  # ===== INFRA =====
+  jaeger:
+    image: jaegertracing/all-in-one:1.57
+    ports:
+      - "16686:16686"
+      - "4318:4318"
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-guest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS:-guest}
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    container_name: mailhog
+    ports:
+      - "8025:8025"   # UI
+      - "1025:1025"   # SMTP
+    networks:
+      - app-net
+    restart: unless-stopped
+
+
+  # ===== DATABASES =====
+  mongo:
+    image: mongo:7.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  cassandra:
+    image: cassandra:4.1
+    container_name: cassandra-notifications
+    ports:
+      - "9042:9042"
+    environment:
+      CASSANDRA_CLUSTER_NAME: "Test Cluster"
+      CASSANDRA_DC: "datacenter1"
+      CASSANDRA_RACK: "rack1"
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+    networks:
+      - app-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "cqlsh -e 'DESCRIBE KEYSPACES' 127.0.0.1 9042 || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 20
+
+  neo4j:
+    image: neo4j:5
+    environment:
+      AUTO_SEED: "true"
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:-Neo4jPass123!}
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  mongo-express:
+    image: mongo-express:1.0.2
+    container_name: mongo-express
+    ports:
+      - "8086:8081"
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_MONGODB_PORT: "27017"
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+    depends_on:
+      - mongo
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  # ===== HDFS =====
+  hdfs-namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    environment:
+      CLUSTER_NAME: music-cluster
+    ports:
+      - "9870:9870"
+      - "9000:9000"
+    volumes:
+      - hdfs_namenode:/hadoop/dfs/name
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  hdfs-datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    environment:
+      CLUSTER_NAME: music-cluster
+    depends_on:
+      - hdfs-namenode
+    ports:
+      - "9864:9864"
+    volumes:
+      - hdfs_datanode:/hadoop/dfs/data
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  # ===== MICROSERVICES (GO) =====
+  users:
+    build:
+      context: ./services/users
+    ports:
+      - "8081:8080"
+    environment:
+      PORT: "8080"
+      MONGO_URI: mongodb://mongo:27017/users_db
+      SMTP_HOST: mailhog
+      SMTP_PORT: "1025"
+      SMTP_FROM: "noreply@music-platform.local"
+      SMTP_USER: ""         # MailHog ne treba auth
+      SMTP_PASS: ""
+      FRONTEND_BASE_URL: "http://localhost:4200"
+    depends_on:
+      - mongo
+      - mailhog
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  content:
+    build:
+      context: ./services/content
+    environment:
+      PORT: "8080"
+      MONGO_URI: mongodb://mongo:27017/content_db
+      HDFS_URL: hdfs://hdfs-namenode:9000
+      AUTO_SEED: "true"
+    depends_on:
+      - mongo
+      - hdfs-namenode
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  ratings:
+    build:
+      context: ./services/ratings
+    environment:
+      PORT: "8080"
+      MONGO_URI: mongodb://mongo:27017/ratings_db
+    depends_on:
+      - mongo
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  subscriptions:
+    build:
+      context: ./services/subscriptions
+    environment:
+      PORT: "8080"
+      MONGO_URI: mongodb://mongo:27017/subscriptions_db
+    depends_on:
+      - mongo
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  notifications:
+    build:
+      context: ./services/notifications
+    ports:
+      - "8085:8080"
+    environment:
+      PORT: "8080"
+      CASSANDRA_HOST: cassandra
+      CASSANDRA_PORT: "9042"
+    depends_on:
+      cassandra:
+        condition: service_healthy
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  recommendation:
+    build:
+      context: ./services/recommendation
+    environment:
+      PORT: "8080"
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:-Neo4jPass123!}
+    depends_on:
+      - neo4j
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  analytics:
+    build:
+      context: ./services/analytics
+    environment:
+      PORT: "8080"
+      MONGO_URI: mongodb://mongo:27017/analytics_db
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+    depends_on:
+      - mongo
+      - redis
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  api-gateway:
+    build:
+      context: ./services/api-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: "8080"
+      USERS_URL: http://users:8080
+      CONTENT_URL: http://content:8080
+      RATINGS_URL: http://ratings:8080
+      SUBSCRIPTIONS_URL: http://subscriptions:8080
+      NOTIFICATIONS_URL: http://notifications:8080
+      RECOMMENDATION_URL: http://recommendation:8080
+      ANALYTICS_URL: http://analytics:8080
+    depends_on:
+      - users
+      - content
+      - ratings
+      - subscriptions
+      - notifications
+      - recommendation
+      - analytics
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  # ===== FRONTEND =====
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - api-gateway
+    networks:
+      - app-net
+    restart: unless-stopped

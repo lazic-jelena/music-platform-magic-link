@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Content</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 22px 22px 26px 22px;
+    }
+
+    .header-top {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.14);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .nav-btn:hover { background: rgba(255,255,255,0.22); }
+    .nav-btn.danger {
+      border-color: rgba(252,129,129,0.55);
+      background: rgba(252,129,129,0.22);
+    }
+    .nav-btn.danger:hover { background: rgba(252,129,129,0.32); }
+
+    .header h1 {
+      font-size: 1.8em;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .header p {
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    .admin-badge {
+      margin-top: 14px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .badge-pill {
+      display:inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.14);
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+
+    .tabs {
+      display: flex;
+      background: #f3f4f6;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 18px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 700;
+      color: #6b7280;
+      transition: all 0.3s;
+      border-bottom: 3px solid transparent;
+      user-select: none;
+    }
+
+    .tab:hover { background: #e5e7eb; }
+    .tab.active {
+      color: #667eea;
+      background: white;
+      border-bottom-color: #667eea;
+    }
+
+    .content { padding: 30px; }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .form-section {
+      background: #f9fafb;
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      border: 2px solid #e5e7eb;
+    }
+
+    .form-section h3 {
+      margin-bottom: 18px;
+      color: #374151;
+      font-size: 1.3em;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .form-group { display: flex; flex-direction: column; }
+
+    .form-group label {
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #4b5563;
+      font-size: 0.9em;
+    }
+
+    .form-group input, .form-group textarea {
+      padding: 10px;
+      border: 2px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .form-group textarea { resize: vertical; min-height: 80px; }
+
+    .form-hint {
+      font-size: 0.85em;
+      color: #6b7280;
+      margin-top: 3px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 1em;
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-edit {
+      background: #f59e0b;
+      color: white;
+      padding: 8px 16px;
+      font-size: 0.9em;
+    }
+
+    .btn-edit:hover { background: #d97706; }
+
+    .btn-delete {
+      background: #ef4444;
+      color: white;
+      padding: 8px 16px;
+      font-size: 0.9em;
+    }
+
+    .btn-delete:hover { background: #dc2626; }
+
+    .items-list { margin-top: 30px; }
+
+    .items-list h3 {
+      margin-bottom: 20px;
+      color: #374151;
+      font-size: 1.3em;
+    }
+
+    .item-card {
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 15px;
+      transition: all 0.3s;
+    }
+
+    .item-card:hover {
+      border-color: #667eea;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 15px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .item-title {
+      font-size: 1.2em;
+      font-weight: 800;
+      color: #1f2937;
+    }
+
+    .item-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .item-details { color: #6b7280; line-height: 1.6; }
+    .item-details p { margin-bottom: 8px; }
+    .item-details strong { color: #374151; }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #dbeafe;
+      color: #1e40af;
+      border-radius: 12px;
+      font-size: 0.85em;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+
+    .message {
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .message.success {
+      background: #d1fae5;
+      color: #065f46;
+      border: 2px solid #10b981;
+    }
+
+    .message.error {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 2px solid #ef4444;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: #6b7280;
+      font-size: 1.1em;
+      font-weight: 700;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: #9ca3af;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-top">
+        <button class="nav-btn" id="btnBack">← Browse</button>
+        <button class="nav-btn danger" id="btnLogout">Odjava</button>
+      </div>
+
+      <h1>🎵 Admin panel (Content)</h1>
+      <p>CRUD nad Artists / Albums / Songs preko <b>/api/content</b></p>
+
+      <div class="admin-badge">
+        <span class="badge-pill" id="adminLabel">Admin</span>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active" data-tab="artists">Artists</div>
+      <div class="tab" data-tab="albums">Albums</div>
+      <div class="tab" data-tab="songs">Songs</div>
+    </div>
+
+    <div class="content">
+      <!-- Artists Tab -->
+      <div id="artists" class="tab-content active">
+        <div class="form-section">
+          <h3>Create New Artist</h3>
+          <form id="createArtistForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Name *</label>
+                <input type="text" name="name" required>
+              </div>
+              <div class="form-group">
+                <label>Genres *</label>
+                <input type="text" name="genres" placeholder="Rock, Pop, Jazz" required>
+                <span class="form-hint">Comma-separated values</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Bio</label>
+              <textarea name="bio" placeholder="Artist biography..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Artist</button>
+          </form>
+        </div>
+        <div id="artistsMessage"></div>
+        <div class="items-list">
+          <h3>All Artists</h3>
+          <div id="artistsList"></div>
+        </div>
+      </div>
+
+      <!-- Albums Tab -->
+      <div id="albums" class="tab-content">
+        <div class="form-section">
+          <h3>Create New Album</h3>
+          <form id="createAlbumForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Title *</label>
+                <input type="text" name="title" required>
+              </div>
+              <div class="form-group">
+                <label>Genre *</label>
+                <input type="text" name="genre" required>
+              </div>
+              <div class="form-group">
+                <label>Primary Artist ID *</label>
+                <input type="text" name="artist_id" required>
+              </div>
+              <div class="form-group">
+                <label>Release Year *</label>
+                <input type="number" name="release_year" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>All Artist IDs</label>
+              <input type="text" name="artist_ids" placeholder="id1, id2, id3">
+              <span class="form-hint">Comma-separated artist IDs for collaborations</span>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Album</button>
+          </form>
+        </div>
+        <div id="albumsMessage"></div>
+        <div class="items-list">
+          <h3>All Albums</h3>
+          <div id="albumsList"></div>
+        </div>
+      </div>
+
+      <!-- Songs Tab -->
+      <div id="songs" class="tab-content">
+        <div class="form-section">
+          <h3>Create New Song</h3>
+          <form id="createSongForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Title *</label>
+                <input type="text" name="title" required>
+              </div>
+              <div class="form-group">
+                <label>Genre *</label>
+                <input type="text" name="genre" required>
+              </div>
+              <div class="form-group">
+                <label>Album ID *</label>
+                <input type="text" name="album_id" required>
+              </div>
+              <div class="form-group">
+                <label>Primary Artist ID *</label>
+                <input type="text" name="artist_id" required>
+              </div>
+              <div class="form-group">
+                <label>Duration (seconds) *</label>
+                <input type="number" name="duration" required>
+              </div>
+              <div class="form-group">
+                <label>Track Number *</label>
+                <input type="number" name="track_number" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>All Artist IDs</label>
+              <input type="text" name="artist_ids" placeholder="id1, id2, id3">
+              <span class="form-hint">Comma-separated artist IDs for collaborations</span>
+            </div>
+            <div class="form-group">
+              <label>Audio Path</label>
+              <input type="text" name="audio_path" placeholder="/music/song.mp3">
+            </div>
+            <button type="submit" class="btn btn-primary">Create Song</button>
+          </form>
+        </div>
+        <div id="songsMessage"></div>
+        <div class="items-list">
+          <h3>All Songs</h3>
+          <div id="songsList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ===== AUTH / ROLE (FIX) =====
+    function readAuth() {
+      const rawUser = localStorage.getItem('user');
+      let user = null;
+
+      if (rawUser) {
+        try {
+          const parsed = JSON.parse(rawUser);
+          if (parsed && typeof parsed === 'object') user = parsed;
+          else if (typeof parsed === 'string') user = { username: parsed, email: parsed };
+        } catch {
+          user = { username: rawUser, email: rawUser };
+        }
+      }
+
+      let role =
+        (user && (user.role ?? user.Role ?? user.userRole ?? user.user_role)) ??
+        localStorage.getItem('role') ??
+        localStorage.getItem('userRole') ??
+        '';
+
+      role = String(role || '').trim().toUpperCase();
+      return { user, role };
+    }
+
+    function isAdminRole(roleStr) {
+      const r = String(roleStr || '').trim().toUpperCase();
+      return (r === 'A' || r === 'ADMIN' || r === 'ROLE_ADMIN');
+    }
+
+    function userLabel(u) {
+      return (u?.username || u?.email || u?.name || u?.id || '').toString();
+    }
+
+    function clearAuth() {
+      ['user', 'role', 'userRole', 'token', 'jwt', 'access_token'].forEach(k => localStorage.removeItem(k));
+    }
+
+    const { user: me, role: myRole } = readAuth();
+
+    // mora da postoji user
+    if (!me || !userLabel(me)) {
+      window.location.href = 'user_service.html';
+    }
+
+    // mora da bude admin
+    if (!isAdminRole(myRole) && !isAdminRole(me.role) && !isAdminRole(me.Role)) {
+      window.location.href = 'index.html';
+    }
+
+    document.getElementById('adminLabel').textContent = `Admin: ${userLabel(me)} (${myRole || 'A'})`;
+
+    document.getElementById('btnBack').onclick = () => window.location.href = 'index.html';
+    document.getElementById('btnLogout').onclick = () => {
+      clearAuth();
+      window.location.href = 'user_service.html';
+    };
+
+    // ===== API config (nginx proxy) =====
+    const API_PREFIX = '/api/content';
+
+    // X-User-Role šaljemo ako backend tako proverava admin akcije
+    const ADMIN_HEADER_ROLE = (myRole || 'A');
+
+    function escapeHtml(s){
+      return String(s ?? '').replace(/[&<>"']/g, m => ({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+      }[m]));
+    }
+
+    function showMessage(elementId, message, isError = false) {
+      const el = document.getElementById(elementId);
+      el.innerHTML = `<div class="message ${isError ? 'error' : 'success'}">${escapeHtml(message)}</div>`;
+      setTimeout(() => el.innerHTML = '', 5000);
+    }
+
+    async function apiCall(endpoint, method = 'GET', body = null) {
+      const headers = { 'Content-Type': 'application/json' };
+      headers['X-User-Role'] = ADMIN_HEADER_ROLE;
+
+      const options = {
+        method,
+        headers,
+        credentials: 'same-origin',
+        cache: 'no-store'
+      };
+
+      if (body) options.body = JSON.stringify(body);
+
+      const res = await fetch(`${API_PREFIX}${endpoint}`, options);
+      const text = await res.text();
+      let data = null;
+      try { data = text ? JSON.parse(text) : null; } catch { data = { raw: text }; }
+
+      if (!res.ok) {
+        const msg = (data && (data.error || data.message)) ? (data.error || data.message) : ('HTTP ' + res.status);
+        throw new Error(msg);
+      }
+      return data;
+    }
+
+    // ===== TABS =====
+    function switchTab(tabKey) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tabKey));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.toggle('active', c.id === tabKey));
+
+      if (tabKey === 'artists') loadArtists();
+      if (tabKey === 'albums') loadAlbums();
+      if (tabKey === 'songs') loadSongs();
+    }
+
+    document.querySelectorAll('.tab').forEach(t => {
+      t.addEventListener('click', () => switchTab(t.dataset.tab));
+    });
+
+    function normalizeListResponse(data) {
+      if (!data) return [];
+      if (Array.isArray(data)) return data;
+      if (Array.isArray(data.items)) return data.items;
+      return [];
+    }
+
+    function jsStr(s) {
+      // escape za inline onclick string argument (single quotes)
+      return String(s ?? '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+    }
+
+    // ===== Artists CRUD =====
+    async function loadArtists() {
+      const list = document.getElementById('artistsList');
+      list.innerHTML = '<div class="loading">Loading artists...</div>';
+
+      try {
+        const data = await apiCall('/artists?page=1&limit=100');
+        const artists = normalizeListResponse(data);
+
+        if (!artists.length) {
+          list.innerHTML = '<div class="empty-state">No artists found. Create one above!</div>';
+          return;
+        }
+
+        list.innerHTML = artists.map(artist => `
+          <div class="item-card">
+            <div class="item-header">
+              <div class="item-title">${escapeHtml(artist.name)}</div>
+              <div class="item-actions">
+                <button class="btn btn-edit" onclick="editArtist('${jsStr(artist.id)}')">Edit</button>
+                <button class="btn btn-delete" onclick="deleteArtist('${jsStr(artist.id)}')">Delete</button>
+              </div>
+            </div>
+            <div class="item-details">
+              <p><strong>ID:</strong> ${escapeHtml(artist.id)}</p>
+              ${artist.bio ? `<p><strong>Bio:</strong> ${escapeHtml(artist.bio)}</p>` : ''}
+              <p><strong>Genres:</strong> ${
+                artist.genres ? artist.genres.map(g => `<span class="badge">${escapeHtml(g)}</span>`).join('') : 'N/A'
+              }</p>
+            </div>
+          </div>
+        `).join('');
+      } catch (error) {
+        list.innerHTML = `<div class="empty-state">Error loading artists: ${escapeHtml(error.message)}</div>`;
+      }
+    }
+
+    document.getElementById('createArtistForm').addEventListener('submit', createArtist);
+
+    async function createArtist(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+
+      const artist = {
+        name: formData.get('name'),
+        bio: formData.get('bio'),
+        genres: String(formData.get('genres') || '')
+          .split(',').map(g => g.trim()).filter(Boolean)
+      };
+
+      try {
+        await apiCall('/artists', 'POST', artist);
+        showMessage('artistsMessage', 'Artist created successfully!');
+        form.reset();
+        loadArtists();
+      } catch (error) {
+        showMessage('artistsMessage', error.message, true);
+      }
+    }
+
+    async function deleteArtist(id) {
+      if (!confirm('Are you sure you want to delete this artist?')) return;
+
+      try {
+        await apiCall(`/artists/${encodeURIComponent(id)}`, 'DELETE');
+        showMessage('artistsMessage', 'Artist deleted successfully!');
+        loadArtists();
+      } catch (error) {
+        showMessage('artistsMessage', error.message, true);
+      }
+    }
+
+    async function editArtist(id) {
+      try {
+        const data = await apiCall(`/artists/${encodeURIComponent(id)}`, 'GET');
+        const artist = data?.artist || data;
+
+        const name = prompt('Name:', artist.name || '');
+        if (!name) return;
+
+        const bio = prompt('Bio:', artist.bio || '');
+        const genresStr = prompt('Genres (comma-separated):', (artist.genres || []).join(', '));
+
+        const updated = {
+          name,
+          bio,
+          genres: String(genresStr || '').split(',').map(g => g.trim()).filter(Boolean)
+        };
+
+        await apiCall(`/artists/${encodeURIComponent(id)}`, 'PUT', updated);
+        showMessage('artistsMessage', 'Artist updated successfully!');
+        loadArtists();
+      } catch (error) {
+        showMessage('artistsMessage', error.message, true);
+      }
+    }
+
+    // ===== Albums CRUD =====
+    async function loadAlbums() {
+      const list = document.getElementById('albumsList');
+      list.innerHTML = '<div class="loading">Loading albums...</div>';
+
+      try {
+        const data = await apiCall('/albums?page=1&limit=100');
+        const albums = normalizeListResponse(data);
+
+        if (!albums.length) {
+          list.innerHTML = '<div class="empty-state">No albums found. Create one above!</div>';
+          return;
+        }
+
+        list.innerHTML = albums.map(album => `
+          <div class="item-card">
+            <div class="item-header">
+              <div class="item-title">${escapeHtml(album.title)}</div>
+              <div class="item-actions">
+                <button class="btn btn-edit" onclick="editAlbum('${jsStr(album.id)}')">Edit</button>
+                <button class="btn btn-delete" onclick="deleteAlbum('${jsStr(album.id)}')">Delete</button>
+              </div>
+            </div>
+            <div class="item-details">
+              <p><strong>ID:</strong> ${escapeHtml(album.id)}</p>
+              <p><strong>Genre:</strong> <span class="badge">${escapeHtml(album.genre)}</span></p>
+              <p><strong>Release Year:</strong> ${escapeHtml(album.release_year)}</p>
+              <p><strong>Primary Artist ID:</strong> ${escapeHtml(album.artist_id)}</p>
+              ${album.artist_ids && album.artist_ids.length > 0 ? `<p><strong>All Artists:</strong> ${album.artist_ids.map(escapeHtml).join(', ')}</p>` : ''}
+            </div>
+          </div>
+        `).join('');
+      } catch (error) {
+        list.innerHTML = `<div class="empty-state">Error loading albums: ${escapeHtml(error.message)}</div>`;
+      }
+    }
+
+    document.getElementById('createAlbumForm').addEventListener('submit', createAlbum);
+
+    async function createAlbum(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+
+      const album = {
+        title: formData.get('title'),
+        genre: formData.get('genre'),
+        artist_id: formData.get('artist_id'),
+        release_year: parseInt(formData.get('release_year'), 10),
+        artist_ids: String(formData.get('artist_ids') || '')
+          .split(',').map(id => id.trim()).filter(Boolean)
+      };
+
+      try {
+        await apiCall('/albums', 'POST', album);
+        showMessage('albumsMessage', 'Album created successfully!');
+        form.reset();
+        loadAlbums();
+      } catch (error) {
+        showMessage('albumsMessage', error.message, true);
+      }
+    }
+
+    async function deleteAlbum(id) {
+      if (!confirm('Are you sure you want to delete this album?')) return;
+
+      try {
+        await apiCall(`/albums/${encodeURIComponent(id)}`, 'DELETE');
+        showMessage('albumsMessage', 'Album deleted successfully!');
+        loadAlbums();
+      } catch (error) {
+        showMessage('albumsMessage', error.message, true);
+      }
+    }
+
+    async function editAlbum(id) {
+      try {
+        const data = await apiCall(`/albums/${encodeURIComponent(id)}`, 'GET');
+        const album = data?.album || data;
+
+        const title = prompt('Title:', album.title || '');
+        if (!title) return;
+
+        const genre = prompt('Genre:', album.genre || '');
+        const artist_id = prompt('Primary Artist ID:', album.artist_id || '');
+        const release_year = prompt('Release Year:', album.release_year ?? '');
+        const artist_ids_str = prompt('All Artist IDs (comma-separated):', (album.artist_ids || []).join(', '));
+
+        const updated = {
+          title,
+          genre,
+          artist_id,
+          release_year: parseInt(release_year, 10),
+          artist_ids: String(artist_ids_str || '').split(',').map(x => x.trim()).filter(Boolean)
+        };
+
+        await apiCall(`/albums/${encodeURIComponent(id)}`, 'PUT', updated);
+        showMessage('albumsMessage', 'Album updated successfully!');
+        loadAlbums();
+      } catch (error) {
+        showMessage('albumsMessage', error.message, true);
+      }
+    }
+
+    // ===== Songs CRUD =====
+    async function loadSongs() {
+      const list = document.getElementById('songsList');
+      list.innerHTML = '<div class="loading">Loading songs...</div>';
+
+      try {
+        const data = await apiCall('/songs?page=1&limit=100');
+        const songs = normalizeListResponse(data);
+
+        if (!songs.length) {
+          list.innerHTML = '<div class="empty-state">No songs found. Create one above!</div>';
+          return;
+        }
+
+        list.innerHTML = songs.map(song => `
+          <div class="item-card">
+            <div class="item-header">
+              <div class="item-title">${escapeHtml(song.title)}</div>
+              <div class="item-actions">
+                <button class="btn btn-edit" onclick="editSong('${jsStr(song.id)}')">Edit</button>
+                <button class="btn btn-delete" onclick="deleteSong('${jsStr(song.id)}')">Delete</button>
+              </div>
+            </div>
+            <div class="item-details">
+              <p><strong>ID:</strong> ${escapeHtml(song.id)}</p>
+              <p><strong>Genre:</strong> <span class="badge">${escapeHtml(song.genre)}</span></p>
+              <p><strong>Duration:</strong> ${escapeHtml(song.duration)}s</p>
+              <p><strong>Track #:</strong> ${escapeHtml(song.track_number)}</p>
+              <p><strong>Album ID:</strong> ${escapeHtml(song.album_id)}</p>
+              <p><strong>Primary Artist ID:</strong> ${escapeHtml(song.artist_id)}</p>
+              ${song.artist_ids && song.artist_ids.length > 0 ? `<p><strong>All Artists:</strong> ${song.artist_ids.map(escapeHtml).join(', ')}</p>` : ''}
+              ${song.audio_path ? `<p><strong>Audio Path:</strong> ${escapeHtml(song.audio_path)}</p>` : ''}
+            </div>
+          </div>
+        `).join('');
+      } catch (error) {
+        list.innerHTML = `<div class="empty-state">Error loading songs: ${escapeHtml(error.message)}</div>`;
+      }
+    }
+
+    document.getElementById('createSongForm').addEventListener('submit', createSong);
+
+    async function createSong(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+
+      const song = {
+        title: formData.get('title'),
+        genre: formData.get('genre'),
+        album_id: formData.get('album_id'),
+        artist_id: formData.get('artist_id'),
+        duration: parseInt(formData.get('duration'), 10),
+        track_number: parseInt(formData.get('track_number'), 10),
+        audio_path: formData.get('audio_path'),
+        artist_ids: String(formData.get('artist_ids') || '')
+          .split(',').map(id => id.trim()).filter(Boolean)
+      };
+
+      try {
+        await apiCall('/songs', 'POST', song);
+        showMessage('songsMessage', 'Song created successfully!');
+        form.reset();
+        loadSongs();
+      } catch (error) {
+        showMessage('songsMessage', error.message, true);
+      }
+    }
+
+    async function deleteSong(id) {
+      if (!confirm('Are you sure you want to delete this song?')) return;
+
+      try {
+        await apiCall(`/songs/${encodeURIComponent(id)}`, 'DELETE');
+        showMessage('songsMessage', 'Song deleted successfully!');
+        loadSongs();
+      } catch (error) {
+        showMessage('songsMessage', error.message, true);
+      }
+    }
+
+    async function editSong(id) {
+      try {
+        const data = await apiCall(`/songs/${encodeURIComponent(id)}`, 'GET');
+        const song = data?.song || data;
+
+        const title = prompt('Title:', song.title || '');
+        if (!title) return;
+
+        const genre = prompt('Genre:', song.genre || '');
+        const album_id = prompt('Album ID:', song.album_id || '');
+        const artist_id = prompt('Primary Artist ID:', song.artist_id || '');
+        const duration = prompt('Duration (seconds):', song.duration ?? '');
+        const track_number = prompt('Track Number:', song.track_number ?? '');
+        const audio_path = prompt('Audio Path:', song.audio_path || '');
+        const artist_ids_str = prompt('All Artist IDs (comma-separated):', (song.artist_ids || []).join(', '));
+
+        const updated = {
+          title,
+          genre,
+          album_id,
+          artist_id,
+          duration: parseInt(duration, 10),
+          track_number: parseInt(track_number, 10),
+          audio_path,
+          artist_ids: String(artist_ids_str || '').split(',').map(x => x.trim()).filter(Boolean)
+        };
+
+        await apiCall(`/songs/${encodeURIComponent(id)}`, 'PUT', updated);
+        showMessage('songsMessage', 'Song updated successfully!');
+        loadSongs();
+      } catch (error) {
+        showMessage('songsMessage', error.message, true);
+      }
+    }
+
+    // ===== Initial load =====
+    loadArtists();
+  </script>
+</body>
+</html>

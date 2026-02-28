@@ -1,0 +1,74 @@
+[
+  {
+    "username": "ana_petrovic",
+    "email": "ana.petrovic@test.com",
+    "firstName": "Ana",
+    "lastName": "Petrović",
+    "hashedPassword": "$2a$10$CwTycUXWue0Thq9StjUM0uJ8QXr1sI3lH8JYpJ8nH1Z9EJw9x6z2e",
+    "role": "user",
+    "passwordCreatedAt": "2026-01-01T10:00:00Z",
+    "createdAt": "2026-01-01T10:00:00Z",
+    "updatedAt": "2026-01-01T10:00:00Z",
+    "isActive": true
+  },
+  {
+    "username": "marko_jovanovic",
+    "email": "marko.jovanovic@test.com",
+    "firstName": "Marko",
+    "lastName": "Jovanović",
+    "hashedPassword": "$2a$10$CwTycUXWue0Thq9StjUM0uJ8QXr1sI3lH8JYpJ8nH1Z9EJw9x6z2e",
+    "role": "user",
+    "passwordCreatedAt": "2026-01-02T11:00:00Z",
+    "createdAt": "2026-01-02T11:00:00Z",
+    "updatedAt": "2026-01-02T11:00:00Z",
+    "isActive": true
+  },
+  {
+    "username": "ivana_milic",
+    "email": "ivana.milic@test.com",
+    "firstName": "Ivana",
+    "lastName": "Milić",
+    "hashedPassword": "$2a$10$CwTycUXWue0Thq9StjUM0uJ8QXr1sI3lH8JYpJ8nH1Z9EJw9x6z2e",
+    "role": "user",
+    "passwordCreatedAt": "2026-01-03T12:00:00Z",
+    "createdAt": "2026-01-03T12:00:00Z",
+    "updatedAt": "2026-01-03T12:00:00Z",
+    "isActive": true
+  },
+  {
+    "username": "nikola_stankovic",
+    "email": "nikola.stankovic@test.com",
+    "firstName": "Nikola",
+    "lastName": "Stanković",
+    "hashedPassword": "$2a$10$CwTycUXWue0Thq9StjUM0uJ8QXr1sI3lH8JYpJ8nH1Z9EJw9x6z2e",
+    "role": "user",
+    "passwordCreatedAt": "2026-01-04T13:00:00Z",
+    "createdAt": "2026-01-04T13:00:00Z",
+    "updatedAt": "2026-01-04T13:00:00Z",
+    "isActive": true
+  },
+  {
+    "username": "milica_kovacevic",
+    "email": "milica.kovacevic@test.com",
+    "firstName": "Milica",
+    "lastName": "Kovačević",
+    "hashedPassword": "$2a$10$CwTycUXWue0Thq9StjUM0uJ8QXr1sI3lH8JYpJ8nH1Z9EJw9x6z2e",
+    "role": "user",
+    "passwordCreatedAt": "2026-01-05T14:00:00Z",
+    "createdAt": "2026-01-05T14:00:00Z",
+    "updatedAt": "2026-01-05T14:00:00Z",
+    "isActive": true
+  },
+  {
+    "username": "stefan_ilic",
+    "email": "stefan.ilic@test.com",
+    "firstName": "Stefan",
+    "lastName": "Ilić",
+    "hashedPassword": "$2a$10$CwTycUXWue0Thq9StjUM0uJ8QXr1sI3lH8JYpJ8nH1Z9EJw9x6z2e",
+    "role": "user",
+    "passwordCreatedAt": "2026-01-06T15:00:00Z",
+    "createdAt": "2026-01-06T15:00:00Z",
+    "updatedAt": "2026-01-06T15:00:00Z",
+    "isActive": true
+  }
+]

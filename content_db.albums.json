@@ -1,0 +1,1716 @@
+[{
+  "_id": {
+    "$oid": "69542e956bc657a44fb0012f"
+  },
+  "title": "Rock Album",
+  "genre": "Rock",
+  "artist_id": {
+    "$oid": "69542e956bc657a44fb0012d"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69542e956bc657a44fb0012d"
+    }
+  ],
+  "release_year": 2020,
+  "created_at": {
+    "$date": "2025-12-30T19:57:09.723Z"
+  },
+  "updated_at": {
+    "$date": "2025-12-30T19:57:09.723Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69542e956bc657a44fb00130"
+  },
+  "title": "Pop Album",
+  "genre": "Pop",
+  "artist_id": {
+    "$oid": "69542e956bc657a44fb0012e"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69542e956bc657a44fb0012e"
+    }
+  ],
+  "release_year": 2022,
+  "created_at": {
+    "$date": "2025-12-30T19:57:09.723Z"
+  },
+  "updated_at": {
+    "$date": "2025-12-30T19:57:09.723Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33da"
+  },
+  "title": "AutoSeed Album 3-1",
+  "genre": "Jazz",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b4"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b4"
+    }
+  ],
+  "release_year": 2019,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33db"
+  },
+  "title": "AutoSeed Album 3-2",
+  "genre": "Jazz",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b4"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b4"
+    }
+  ],
+  "release_year": 2020,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33dc"
+  },
+  "title": "AutoSeed Album 4-1",
+  "genre": "Metal",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b5"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b5"
+    }
+  ],
+  "release_year": 2020,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33dd"
+  },
+  "title": "AutoSeed Album 4-2",
+  "genre": "Metal",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b5"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b5"
+    }
+  ],
+  "release_year": 2021,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33de"
+  },
+  "title": "AutoSeed Album 5-1",
+  "genre": "Electronic",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b6"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b6"
+    }
+  ],
+  "release_year": 2021,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33df"
+  },
+  "title": "AutoSeed Album 5-2",
+  "genre": "Electronic",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b6"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b6"
+    }
+  ],
+  "release_year": 2022,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33e0"
+  },
+  "title": "AutoSeed Album 6-1",
+  "genre": "Indie",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b7"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b7"
+    }
+  ],
+  "release_year": 2022,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33e1"
+  },
+  "title": "AutoSeed Album 6-2",
+  "genre": "Indie",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b7"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b7"
+    }
+  ],
+  "release_year": 2023,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33e2"
+  },
+  "title": "AutoSeed Album 7-1",
+  "genre": "Classical",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b8"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b8"
+    }
+  ],
+  "release_year": 2023,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33e3"
+  },
+  "title": "AutoSeed Album 7-2",
+  "genre": "Classical",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b8"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b8"
+    }
+  ],
+  "release_year": 2024,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33e4"
+  },
+  "title": "AutoSeed Album 8-1",
+  "genre": "R&B",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b9"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b9"
+    }
+  ],
+  "release_year": 2024,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33e5"
+  },
+  "title": "AutoSeed Album 8-2",
+  "genre": "R&B",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33b9"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33b9"
+    }
+  ],
+  "release_year": 2025,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33e6"
+  },
+  "title": "AutoSeed Album 9-1",
+  "genre": "Folk",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33ba"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33ba"
+    }
+  ],
+  "release_year": 2025,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33e7"
+  },
+  "title": "AutoSeed Album 9-2",
+  "genre": "Folk",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33ba"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33ba"
+    }
+  ],
+  "release_year": 2015,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33e8"
+  },
+  "title": "AutoSeed Album 10-1",
+  "genre": "Rock",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33bb"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33bb"
+    }
+  ],
+  "release_year": 2015,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33e9"
+  },
+  "title": "AutoSeed Album 10-2",
+  "genre": "Rock",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33bb"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33bb"
+    }
+  ],
+  "release_year": 2016,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33ea"
+  },
+  "title": "AutoSeed Album 11-1",
+  "genre": "Pop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33bc"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33bc"
+    }
+  ],
+  "release_year": 2016,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33eb"
+  },
+  "title": "AutoSeed Album 11-2",
+  "genre": "Pop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33bc"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33bc"
+    }
+  ],
+  "release_year": 2017,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33ec"
+  },
+  "title": "AutoSeed Album 12-1",
+  "genre": "Hip-Hop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33bd"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33bd"
+    }
+  ],
+  "release_year": 2017,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33ed"
+  },
+  "title": "AutoSeed Album 12-2",
+  "genre": "Hip-Hop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33bd"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33bd"
+    }
+  ],
+  "release_year": 2018,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33ee"
+  },
+  "title": "AutoSeed Album 13-1",
+  "genre": "Jazz",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33be"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33be"
+    }
+  ],
+  "release_year": 2018,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33ef"
+  },
+  "title": "AutoSeed Album 13-2",
+  "genre": "Jazz",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33be"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33be"
+    }
+  ],
+  "release_year": 2019,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33f0"
+  },
+  "title": "AutoSeed Album 14-1",
+  "genre": "Metal",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33bf"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33bf"
+    }
+  ],
+  "release_year": 2019,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33f1"
+  },
+  "title": "AutoSeed Album 14-2",
+  "genre": "Metal",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33bf"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33bf"
+    }
+  ],
+  "release_year": 2020,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33f2"
+  },
+  "title": "AutoSeed Album 15-1",
+  "genre": "Electronic",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c0"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c0"
+    }
+  ],
+  "release_year": 2020,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33f3"
+  },
+  "title": "AutoSeed Album 15-2",
+  "genre": "Electronic",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c0"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c0"
+    }
+  ],
+  "release_year": 2021,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33f4"
+  },
+  "title": "AutoSeed Album 16-1",
+  "genre": "Indie",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c1"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c1"
+    }
+  ],
+  "release_year": 2021,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33f5"
+  },
+  "title": "AutoSeed Album 16-2",
+  "genre": "Indie",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c1"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c1"
+    }
+  ],
+  "release_year": 2022,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33f6"
+  },
+  "title": "AutoSeed Album 17-1",
+  "genre": "Classical",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c2"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c2"
+    }
+  ],
+  "release_year": 2022,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33f7"
+  },
+  "title": "AutoSeed Album 17-2",
+  "genre": "Classical",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c2"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c2"
+    }
+  ],
+  "release_year": 2023,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33f8"
+  },
+  "title": "AutoSeed Album 18-1",
+  "genre": "R&B",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c3"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c3"
+    }
+  ],
+  "release_year": 2023,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33f9"
+  },
+  "title": "AutoSeed Album 18-2",
+  "genre": "R&B",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c3"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c3"
+    }
+  ],
+  "release_year": 2024,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33fa"
+  },
+  "title": "AutoSeed Album 19-1",
+  "genre": "Folk",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c4"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c4"
+    }
+  ],
+  "release_year": 2024,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33fb"
+  },
+  "title": "AutoSeed Album 19-2",
+  "genre": "Folk",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c4"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c4"
+    }
+  ],
+  "release_year": 2025,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33fc"
+  },
+  "title": "AutoSeed Album 20-1",
+  "genre": "Rock",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c5"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c5"
+    }
+  ],
+  "release_year": 2025,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33fd"
+  },
+  "title": "AutoSeed Album 20-2",
+  "genre": "Rock",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c5"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c5"
+    }
+  ],
+  "release_year": 2015,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33fe"
+  },
+  "title": "AutoSeed Album 21-1",
+  "genre": "Pop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c6"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c6"
+    }
+  ],
+  "release_year": 2015,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33ff"
+  },
+  "title": "AutoSeed Album 21-2",
+  "genre": "Pop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c6"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c6"
+    }
+  ],
+  "release_year": 2016,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3400"
+  },
+  "title": "AutoSeed Album 22-1",
+  "genre": "Hip-Hop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c7"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c7"
+    }
+  ],
+  "release_year": 2016,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3401"
+  },
+  "title": "AutoSeed Album 22-2",
+  "genre": "Hip-Hop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c7"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c7"
+    }
+  ],
+  "release_year": 2017,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3402"
+  },
+  "title": "AutoSeed Album 23-1",
+  "genre": "Jazz",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c8"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c8"
+    }
+  ],
+  "release_year": 2017,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3403"
+  },
+  "title": "AutoSeed Album 23-2",
+  "genre": "Jazz",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c8"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c8"
+    }
+  ],
+  "release_year": 2018,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3404"
+  },
+  "title": "AutoSeed Album 24-1",
+  "genre": "Metal",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c9"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c9"
+    }
+  ],
+  "release_year": 2018,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3405"
+  },
+  "title": "AutoSeed Album 24-2",
+  "genre": "Metal",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33c9"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33c9"
+    }
+  ],
+  "release_year": 2019,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3406"
+  },
+  "title": "AutoSeed Album 25-1",
+  "genre": "Electronic",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33ca"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33ca"
+    }
+  ],
+  "release_year": 2019,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3407"
+  },
+  "title": "AutoSeed Album 25-2",
+  "genre": "Electronic",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33ca"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33ca"
+    }
+  ],
+  "release_year": 2020,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3408"
+  },
+  "title": "AutoSeed Album 26-1",
+  "genre": "Indie",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33cb"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33cb"
+    }
+  ],
+  "release_year": 2020,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3409"
+  },
+  "title": "AutoSeed Album 26-2",
+  "genre": "Indie",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33cb"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33cb"
+    }
+  ],
+  "release_year": 2021,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec340a"
+  },
+  "title": "AutoSeed Album 27-1",
+  "genre": "Classical",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33cc"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33cc"
+    }
+  ],
+  "release_year": 2021,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec340b"
+  },
+  "title": "AutoSeed Album 27-2",
+  "genre": "Classical",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33cc"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33cc"
+    }
+  ],
+  "release_year": 2022,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec340c"
+  },
+  "title": "AutoSeed Album 28-1",
+  "genre": "R&B",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33cd"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33cd"
+    }
+  ],
+  "release_year": 2022,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec340d"
+  },
+  "title": "AutoSeed Album 28-2",
+  "genre": "R&B",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33cd"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33cd"
+    }
+  ],
+  "release_year": 2023,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec340e"
+  },
+  "title": "AutoSeed Album 29-1",
+  "genre": "Folk",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33ce"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33ce"
+    }
+  ],
+  "release_year": 2023,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec340f"
+  },
+  "title": "AutoSeed Album 29-2",
+  "genre": "Folk",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33ce"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33ce"
+    }
+  ],
+  "release_year": 2024,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3410"
+  },
+  "title": "AutoSeed Album 30-1",
+  "genre": "Rock",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33cf"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33cf"
+    }
+  ],
+  "release_year": 2024,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3411"
+  },
+  "title": "AutoSeed Album 30-2",
+  "genre": "Rock",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33cf"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33cf"
+    }
+  ],
+  "release_year": 2025,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3412"
+  },
+  "title": "AutoSeed Album 31-1",
+  "genre": "Pop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d0"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d0"
+    }
+  ],
+  "release_year": 2025,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3413"
+  },
+  "title": "AutoSeed Album 31-2",
+  "genre": "Pop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d0"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d0"
+    }
+  ],
+  "release_year": 2015,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3414"
+  },
+  "title": "AutoSeed Album 32-1",
+  "genre": "Hip-Hop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d1"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d1"
+    }
+  ],
+  "release_year": 2015,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3415"
+  },
+  "title": "AutoSeed Album 32-2",
+  "genre": "Hip-Hop",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d1"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d1"
+    }
+  ],
+  "release_year": 2016,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3416"
+  },
+  "title": "AutoSeed Album 33-1",
+  "genre": "Jazz",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d2"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d2"
+    }
+  ],
+  "release_year": 2016,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3417"
+  },
+  "title": "AutoSeed Album 33-2",
+  "genre": "Jazz",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d2"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d2"
+    }
+  ],
+  "release_year": 2017,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3418"
+  },
+  "title": "AutoSeed Album 34-1",
+  "genre": "Metal",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d3"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d3"
+    }
+  ],
+  "release_year": 2017,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3419"
+  },
+  "title": "AutoSeed Album 34-2",
+  "genre": "Metal",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d3"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d3"
+    }
+  ],
+  "release_year": 2018,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec341a"
+  },
+  "title": "AutoSeed Album 35-1",
+  "genre": "Electronic",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d4"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d4"
+    }
+  ],
+  "release_year": 2018,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec341b"
+  },
+  "title": "AutoSeed Album 35-2",
+  "genre": "Electronic",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d4"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d4"
+    }
+  ],
+  "release_year": 2019,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec341c"
+  },
+  "title": "AutoSeed Album 36-1",
+  "genre": "Indie",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d5"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d5"
+    }
+  ],
+  "release_year": 2019,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec341d"
+  },
+  "title": "AutoSeed Album 36-2",
+  "genre": "Indie",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d5"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d5"
+    }
+  ],
+  "release_year": 2020,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec341e"
+  },
+  "title": "AutoSeed Album 37-1",
+  "genre": "Classical",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d6"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d6"
+    }
+  ],
+  "release_year": 2020,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec341f"
+  },
+  "title": "AutoSeed Album 37-2",
+  "genre": "Classical",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d6"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d6"
+    }
+  ],
+  "release_year": 2021,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3420"
+  },
+  "title": "AutoSeed Album 38-1",
+  "genre": "R&B",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d7"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d7"
+    }
+  ],
+  "release_year": 2021,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3421"
+  },
+  "title": "AutoSeed Album 38-2",
+  "genre": "R&B",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d7"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d7"
+    }
+  ],
+  "release_year": 2022,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3422"
+  },
+  "title": "AutoSeed Album 39-1",
+  "genre": "Folk",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d8"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d8"
+    }
+  ],
+  "release_year": 2022,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3423"
+  },
+  "title": "AutoSeed Album 39-2",
+  "genre": "Folk",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d8"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d8"
+    }
+  ],
+  "release_year": 2023,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3424"
+  },
+  "title": "AutoSeed Album 40-1",
+  "genre": "Rock",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d9"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d9"
+    }
+  ],
+  "release_year": 2023,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec3425"
+  },
+  "title": "AutoSeed Album 40-2",
+  "genre": "Rock",
+  "artist_id": {
+    "$oid": "69698048e2a32d6f57ec33d9"
+  },
+  "artist_ids": [
+    {
+      "$oid": "69698048e2a32d6f57ec33d9"
+    }
+  ],
+  "release_year": 2024,
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+}]

@@ -1,0 +1,640 @@
+[{
+  "_id": {
+    "$oid": "69542e956bc657a44fb0012d"
+  },
+  "name": "The Rockers",
+  "bio": "Rock band",
+  "genres": [
+    "Rock"
+  ],
+  "created_at": {
+    "$date": "2025-12-30T19:57:09.723Z"
+  },
+  "updated_at": {
+    "$date": "2025-12-30T19:57:09.723Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69542e956bc657a44fb0012e"
+  },
+  "name": "Pop Star",
+  "bio": "Pop artist",
+  "genres": [
+    "Pop"
+  ],
+  "created_at": {
+    "$date": "2025-12-30T19:57:09.723Z"
+  },
+  "updated_at": {
+    "$date": "2025-12-30T19:57:09.723Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33b4"
+  },
+  "name": "AutoSeed Artist 3",
+  "bio": "Auto seeded artist #3",
+  "genres": [
+    "Jazz"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33b5"
+  },
+  "name": "AutoSeed Artist 4",
+  "bio": "Auto seeded artist #4",
+  "genres": [
+    "Metal"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33b6"
+  },
+  "name": "AutoSeed Artist 5",
+  "bio": "Auto seeded artist #5",
+  "genres": [
+    "Electronic"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33b7"
+  },
+  "name": "AutoSeed Artist 6",
+  "bio": "Auto seeded artist #6",
+  "genres": [
+    "Indie"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33b8"
+  },
+  "name": "AutoSeed Artist 7",
+  "bio": "Auto seeded artist #7",
+  "genres": [
+    "Classical"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33b9"
+  },
+  "name": "AutoSeed Artist 8",
+  "bio": "Auto seeded artist #8",
+  "genres": [
+    "R&B"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33ba"
+  },
+  "name": "AutoSeed Artist 9",
+  "bio": "Auto seeded artist #9",
+  "genres": [
+    "Folk"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33bb"
+  },
+  "name": "AutoSeed Artist 10",
+  "bio": "Auto seeded artist #10",
+  "genres": [
+    "Rock"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33bc"
+  },
+  "name": "AutoSeed Artist 11",
+  "bio": "Auto seeded artist #11",
+  "genres": [
+    "Pop"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33bd"
+  },
+  "name": "AutoSeed Artist 12",
+  "bio": "Auto seeded artist #12",
+  "genres": [
+    "Hip-Hop"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33be"
+  },
+  "name": "AutoSeed Artist 13",
+  "bio": "Auto seeded artist #13",
+  "genres": [
+    "Jazz"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33bf"
+  },
+  "name": "AutoSeed Artist 14",
+  "bio": "Auto seeded artist #14",
+  "genres": [
+    "Metal"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33c0"
+  },
+  "name": "AutoSeed Artist 15",
+  "bio": "Auto seeded artist #15",
+  "genres": [
+    "Electronic"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33c1"
+  },
+  "name": "AutoSeed Artist 16",
+  "bio": "Auto seeded artist #16",
+  "genres": [
+    "Indie"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33c2"
+  },
+  "name": "AutoSeed Artist 17",
+  "bio": "Auto seeded artist #17",
+  "genres": [
+    "Classical"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33c3"
+  },
+  "name": "AutoSeed Artist 18",
+  "bio": "Auto seeded artist #18",
+  "genres": [
+    "R&B"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33c4"
+  },
+  "name": "AutoSeed Artist 19",
+  "bio": "Auto seeded artist #19",
+  "genres": [
+    "Folk"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33c5"
+  },
+  "name": "AutoSeed Artist 20",
+  "bio": "Auto seeded artist #20",
+  "genres": [
+    "Rock"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33c6"
+  },
+  "name": "AutoSeed Artist 21",
+  "bio": "Auto seeded artist #21",
+  "genres": [
+    "Pop"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33c7"
+  },
+  "name": "AutoSeed Artist 22",
+  "bio": "Auto seeded artist #22",
+  "genres": [
+    "Hip-Hop"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33c8"
+  },
+  "name": "AutoSeed Artist 23",
+  "bio": "Auto seeded artist #23",
+  "genres": [
+    "Jazz"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33c9"
+  },
+  "name": "AutoSeed Artist 24",
+  "bio": "Auto seeded artist #24",
+  "genres": [
+    "Metal"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33ca"
+  },
+  "name": "AutoSeed Artist 25",
+  "bio": "Auto seeded artist #25",
+  "genres": [
+    "Electronic"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33cb"
+  },
+  "name": "AutoSeed Artist 26",
+  "bio": "Auto seeded artist #26",
+  "genres": [
+    "Indie"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33cc"
+  },
+  "name": "AutoSeed Artist 27",
+  "bio": "Auto seeded artist #27",
+  "genres": [
+    "Classical"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33cd"
+  },
+  "name": "AutoSeed Artist 28",
+  "bio": "Auto seeded artist #28",
+  "genres": [
+    "R&B"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33ce"
+  },
+  "name": "AutoSeed Artist 29",
+  "bio": "Auto seeded artist #29",
+  "genres": [
+    "Folk"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33cf"
+  },
+  "name": "AutoSeed Artist 30",
+  "bio": "Auto seeded artist #30",
+  "genres": [
+    "Rock"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33d0"
+  },
+  "name": "AutoSeed Artist 31",
+  "bio": "Auto seeded artist #31",
+  "genres": [
+    "Pop"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33d1"
+  },
+  "name": "AutoSeed Artist 32",
+  "bio": "Auto seeded artist #32",
+  "genres": [
+    "Hip-Hop"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33d2"
+  },
+  "name": "AutoSeed Artist 33",
+  "bio": "Auto seeded artist #33",
+  "genres": [
+    "Jazz"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33d3"
+  },
+  "name": "AutoSeed Artist 34",
+  "bio": "Auto seeded artist #34",
+  "genres": [
+    "Metal"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33d4"
+  },
+  "name": "AutoSeed Artist 35",
+  "bio": "Auto seeded artist #35",
+  "genres": [
+    "Electronic"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33d5"
+  },
+  "name": "AutoSeed Artist 36",
+  "bio": "Auto seeded artist #36",
+  "genres": [
+    "Indie"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33d6"
+  },
+  "name": "AutoSeed Artist 37",
+  "bio": "Auto seeded artist #37",
+  "genres": [
+    "Classical"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33d7"
+  },
+  "name": "AutoSeed Artist 38",
+  "bio": "Auto seeded artist #38",
+  "genres": [
+    "R&B"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33d8"
+  },
+  "name": "AutoSeed Artist 39",
+  "bio": "Auto seeded artist #39",
+  "genres": [
+    "Folk"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69698048e2a32d6f57ec33d9"
+  },
+  "name": "AutoSeed Artist 40",
+  "bio": "Auto seeded artist #40",
+  "genres": [
+    "Rock"
+  ],
+  "created_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  },
+  "updated_at": {
+    "$date": "2026-01-16T00:03:20.537Z"
+  }
+}]
